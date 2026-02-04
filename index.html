@@ -1,58 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ELEKTRON</title>
-
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f7f4ef; color:#2e1f14; line-height:1.6; }
-    header { background:#6f3a0e; color:#fff; padding:60px 20px; text-align:center; }
-    header h1 { margin:0; letter-spacing:0.35em; }
-    main { max-width:900px; margin:0 auto; padding:40px 20px; }
-    section { margin-bottom:32px; background:#fff; padding:22px; border-radius:8px; }
-    footer { background:#1f120a; color:#fff; text-align:center; padding:18px; }
-  </style>
+  <meta name="description" content="ELEKTRON Wellness Studio — ancient natural alchemy of restoration and peace within." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <h1>ELEKTRON</h1>
-    <p>Ancient natural alchemy of restoration and peace within.</p>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1>ELEKTRON</h1>
+      <p class="tagline">Ancient natural alchemy of restoration and peace within.</p>
+      <p class="subtag">Website in progress — products will be added when mockups are finalized.</p>
+
+      <div class="cta-row">
+        <a class="btn" href="#offerings">Explore Offerings</a>
+        <a class="btn ghost" href="#shop">Shop Coming Soon</a>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section>
+  <main class="wrap">
+    <section class="card" id="about">
       <h2>About</h2>
       <p>
         ELEKTRON is a ritual-based wellness studio rooted in amber, time, and intentional care.
-        Our offerings are designed to support presence through warmth, touch, scent, and pause.
+        Our offerings are designed to support presence through warmth, touch, scent, and pause—
+        a return to the body and a steadying of the moment.
       </p>
     </section>
 
-    <section>
+    <section class="card" id="ritual">
+      <h2>The Ritual</h2>
+      <ol class="ritual">
+        <li>Pause and breathe slowly.</li>
+        <li>Hold your amber stone (or place it nearby).</li>
+        <li>Apply body care with intention—or prepare a warm cup of tea.</li>
+        <li>Notice warmth, texture, aroma, and stillness.</li>
+        <li>Return grounded, empowered, whole.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="offerings">
       <h2>Offerings</h2>
-      <ul>
-        <li>Creams</li>
-        <li>Scrubs</li>
-        <li>Loose-leaf teas</li>
-      </ul>
+      <div class="grid">
+        <div class="tile">
+          <h3>Creams</h3>
+          <p>Ritual body creams designed for slow, intentional application.</p>
+        </div>
+        <div class="tile">
+          <h3>Scrubs</h3>
+          <p>Textural body scrubs created to renew through touch and presence.</p>
+        </div>
+        <div class="tile">
+          <h3>Loose-Leaf Teas</h3>
+          <p>Jars of loose-leaf herbal tea prepared as moments of stillness.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section class="card" id="shop">
       <h2>Shop</h2>
-      <p>Coming soon — products will be added when mockups are finalized.</p>
+      <p>
+        Coming soon. Once product mockups are complete, this section will become a full shop grid
+        with photos, descriptions, and pricing.
+      </p>
     </section>
 
-    <section>
+    <section class="card" id="contact">
       <h2>Contact</h2>
-      <p>Email: YOUR_EMAIL_HERE</p>
+      <p class="small">
+        Email: <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a><br />
+        Instagram: <span class="muted">@yourhandle</span>
+      </p>
+      <p class="tiny">
+        You can update these later—this site is built to be ready for products first.
+      </p>
     </section>
   </main>
 
-  <footer>
-    © ELEKTRON Wellness Studio
+  <footer class="footer">
+    <div class="wrap">
+      <p class="tiny">© <span id="year"></span> ELEKTRON Wellness Studio</p>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
 
