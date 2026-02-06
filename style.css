@@ -90,3 +90,27 @@ footer{
   border-color: rgba(225,165,75,0.8);
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
+.product-hero{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap:18px;
+  align-items:start;
+}
+
+.product-img{
+  border-radius:14px;
+  background: linear-gradient(180deg, rgba(225,165,75,0.25), rgba(111,58,14,0.08));
+  border:1px solid rgba(43,23,11,0.12);
+  min-height:260px;
+  padding:18px;
+}
+
+.product-img p{
+  margin:0;
+  color:rgba(43,23,11,0.70);
+  font-size:13px;
+}
+
+@media (max-width: 780px){
+  .product-hero{ grid-template-columns: 1fr; }
+}
