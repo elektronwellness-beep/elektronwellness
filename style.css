@@ -86,3 +86,7 @@ footer{
   margin:0 auto 16px;
   display:block;
 }
+.tile:hover{
+  border-color: rgba(225,165,75,0.8);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
