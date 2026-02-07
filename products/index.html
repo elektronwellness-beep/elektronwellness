@@ -4,61 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ELEKTRON — Products</title>
-  <meta name="description" content="Explore ELEKTRON ritual-based creams, scrubs, and loose-leaf teas." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
 
-  <header class="hero">
-    <div class="wrap" style="padding:0;">
-      <a href="../index.html" class="btn ghost" style="display:inline-block; margin-bottom:14px;">← Back to Home</a>
-      <img src="../elektron-logo.png" alt="ELEKTRON logo" class="logo" />
-      <h1>ELEKTRON</h1>
-      <p class="tagline">Ritual offerings for restoration and peace within.</p>
+<header class="hero">
+  <div class="wrap" style="padding:0;">
+    <a href="../index.html" class="btn ghost" style="margin-bottom:14px; display:inline-block;">← Back to Home</a>
+    <img src="../elektron-logo.png" alt="ELEKTRON logo" class="logo" />
+    <h1>ELEKTRON</h1>
+    <p class="tagline">Ritual offerings for restoration and peace within.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h2>Offerings</h2>
+
+    <div class="grid">
+      <a class="tile" href="cream-template.html">
+        <h3>Creams</h3>
+        <p class="small muted">4oz / 8oz</p>
+        <p>Warm, grounding body creams.</p>
+      </a>
+
+      <a class="tile" href="scrub-template.html">
+        <h3>Scrubs</h3>
+        <p class="small muted">2oz / 10oz</p>
+        <p>Textural renewal rituals.</p>
+      </a>
+
+      <a class="tile" href="tea-template.html">
+        <h3>Loose-Leaf Teas</h3>
+        <p class="small muted">4oz / 8oz jars</p>
+        <p>Stillness in the cup.</p>
+      </a>
+
+      <a class="tile" href="amber-fossil.html">
+        <h3>Amber Fossil</h3>
+        <p class="small muted">Tumbled crystal</p>
+        <p>Ancient resin for grounding and presence.</p>
+      </a>
+
+      <a class="tile" href="anointing-oil.html">
+        <h3>Anointing Oil</h3>
+        <p class="small muted">Ritual oil</p>
+        <p>Intention-setting and ceremonial use.</p>
+      </a>
     </div>
-  </header>
+  </section>
+</main>
 
-  <main class="wrap">
-    <section class="card">
-      <h2>Offerings</h2>
-      <p class="small">
-        Each ELEKTRON offering is designed as a small ritual—grounded, intentional, and repeatable.
-        Select a category to explore details and ritual use.
-      </p>
+<footer class="footer">
+  © <span id="year"></span> ELEKTRON Wellness Studio
+</footer>
 
-      <div class="grid">
-        <a class="tile" href="cream-template.html" style="display:block; text-decoration:none;">
-          <h3>Creams</h3>
-          <p class="small muted">4oz / 8oz</p>
-          <p>Ritual body creams for warmth, nourishment, and grounding.</p>
-          <p class="small"><strong>Ritual:</strong> “Warm. Press. Breathe.”</p>
-        </a>
-
-        <a class="tile" href="scrub-template.html" style="display:block; text-decoration:none;">
-          <h3>Scrubs</h3>
-          <p class="small muted">2oz / 10oz</p>
-          <p>Textural scrubs for renewal through touch and circulation.</p>
-          <p class="small"><strong>Ritual:</strong> “Circle. Rinse. Seal.”</p>
-        </a>
-
-        <a class="tile" href="tea-template.html" style="display:block; text-decoration:none;">
-          <h3>Loose-Leaf Teas</h3>
-          <p class="small muted">4oz / 8oz jars</p>
-          <p>Herbal blends for stillness, warmth, and pacing the day.</p>
-          <p class="small"><strong>Ritual:</strong> “Steep. Inhale. Sip.”</p>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    © <span id="year"></span> ELEKTRON Wellness Studio
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
