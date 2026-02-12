@@ -187,3 +187,12 @@ h3{
   .product-hero{ grid-template-columns: 1fr; }
 }
 
+/* Products page button layout (prevents breaking/wrapping issues) */
+.buy-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  justify-content:flex-start;
+}
+.buy-row .btn{ white-space:nowrap; }
