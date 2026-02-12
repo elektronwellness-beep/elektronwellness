@@ -62,6 +62,8 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+.ritual{margin:0;padding-left:18px}
+.ritual li{margin:10px 0}
 
 </body>
 </html>
