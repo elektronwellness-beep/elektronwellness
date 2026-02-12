@@ -1,182 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELEKTRON</title>
+  <meta name="description" content="ELEKTRON Wellness Studio — ritual offerings rooted in amber, time, and intentional care." />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-:root{
-  --amber:#6F3A0E;
-  --glow:#E1A54B;
-  --linen:#F5F1EB;
-  --resin:#2B170B;
-  --moss:#6A7A5C;
-  --paper:#FFFFFF;
-}
+<body>
 
-*{ box-sizing:border-box; }
+<header class="hero">
+  <div class="wrap" style="padding:0;">
+    <img src="elektron-logo.png" alt="ELEKTRON logo" class="logo" />
+    <h1>ELEKTRON</h1>
+    <p class="tagline">Ancient natural alchemy of restoration and growth to peace within.</p>
 
-body{
-  margin:0;
-  font-family:'Inter', sans-serif;
-  background:var(--linen);
-  color:var(--resin);
-  line-height:1.75;
-}
+    <div class="cta-row">
+      <a class="btn" href="products/index.html">Shop Products</a>
+      <a class="btn ghost" href="#ritual">The Ritual</a>
+    </div>
+  </div>
+</header>
 
-a{ color:inherit; }
+<main class="wrap">
 
-.hero{
-  background:var(--amber);
-  color:#fff;
-  padding:70px 20px 58px;
-  text-align:center;
-}
+  <section class="card" id="ritual">
+    <h2>The ELEKTRON Ritual</h2>
+    <p>
+      This is not a rush. It is a return. A slow practice of presence through touch, warmth, aroma, and stillness.
+    </p>
 
-.logo{
-  width:150px;
-  max-width:70%;
-  height:auto;
-  display:block;
-  margin:0 auto 16px;
-}
+    <ol class="ritual">
+      <li><strong>Arrive.</strong> Pause. Three slow breaths.</li>
+      <li><strong>Anchor.</strong> Hold your amber or place it near you.</li>
+      <li><strong>Anoint.</strong> Mark the beginning with Ember Intent.</li>
+      <li><strong>Embodiment.</strong> Choose cream, scrub, or tea — and move slowly.</li>
+      <li><strong>Close.</strong> One final breath. Grounded. Empowered. Whole.</li>
+    </ol>
 
-h1{
-  font-family:'Cormorant Garamond', serif;
-  letter-spacing:0.35em;
-  font-weight:500;
-  margin:0;
-}
+    <div class="cta-row" style="justify-content:flex-start;">
+      <a class="btn" href="products/index.html">Shop Products</a>
+    </div>
+  </section>
 
-.tagline{
-  max-width:740px;
-  margin:14px auto 0;
-  font-size:15px;
-  opacity:0.95;
-}
+  <section class="card">
+    <h2>Our Ritual Statement</h2>
+    <p>
+      ELEKTRON is a ceremonial wellness studio rooted in amber, time, and intentional care.
+      Every offering is designed to support presence — not promises. A moment to soften, to listen, and to come home to yourself.
+    </p>
+    <p class="whisper">Not a rush. A return.</p>
+  </section>
 
-.subtag{
-  margin:10px 0 0;
-  font-size:13px;
-  opacity:0.9;
-}
+</main>
 
-.wrap{
-  max-width:980px;
-  margin:0 auto;
-  padding:42px 20px;
-}
+<footer class="footer">
+  © <span id="year"></span> ELEKTRON Wellness Studio
+</footer>
 
-.card{
-  background:var(--paper);
-  border-radius:14px;
-  padding:28px;
-  margin-bottom:20px;
-  box-shadow:0 10px 26px rgba(0,0,0,0.06);
-}
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-h2{
-  font-family:'Cormorant Garamond', serif;
-  letter-spacing:0.08em;
-  font-weight:500;
-  margin:0 0 14px;
-  font-size:22px;
-}
-
-h3{
-  font-family:'Cormorant Garamond', serif;
-  letter-spacing:0.06em;
-  font-weight:500;
-  margin:0 0 8px;
-}
-
-.small{
-  color:rgba(43,23,11,0.75);
-  font-size:13px;
-  margin:10px 0 0;
-}
-
-.tiny{
-  color:rgba(43,23,11,0.7);
-  font-size:12px;
-  margin:10px 0 0;
-}
-
-.muted{ color:rgba(43,23,11,0.65); }
-
-.whisper{
-  margin-top:12px;
-  font-style:italic;
-  color:var(--moss);
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-  gap:16px;
-}
-
-.tile{
-  background:rgba(245,241,235,0.55);
-  border:1px solid rgba(43,23,11,0.10);
-  border-radius:14px;
-  padding:18px;
-}
-
-.tile:hover{
-  border-color: rgba(225,165,75,0.8);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-}
-
-.cta-row{
-  margin-top:18px;
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-block;
-  background:var(--glow);
-  color:var(--resin);
-  padding:10px 16px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:500;
-  white-space:nowrap;
-}
-
-.btn.ghost{
-  background:transparent;
-  color:#fff;
-  border:1px solid rgba(255,255,255,0.70);
-}
-
-.footer{
-  background:var(--resin);
-  color:#fff;
-  text-align:center;
-  padding:22px 12px;
-}
-
-/* Product page layout */
-.product-hero{
-  display:grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap:18px;
-  align-items:start;
-}
-
-.product-img{
-  border-radius:14px;
-  background: linear-gradient(180deg, rgba(225,165,75,0.25), rgba(111,58,14,0.08));
-  border:1px solid rgba(43,23,11,0.12);
-  min-height:260px;
-  padding:18px;
-}
-
-.product-img p{
-  margin:0;
-  color:rgba(43,23,11,0.70);
-  font-size:13px;
-}
-
-@media (max-width: 780px){
-  .product-hero{ grid-template-columns: 1fr; }
-}
+</body>
+</html>
