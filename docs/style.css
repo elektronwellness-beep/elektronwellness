@@ -1,13 +1,184 @@
-body{margin:0;font-family:Arial,sans-serif;background:#f7f4ef;color:#2e1f14;line-height:1.7}
-a{color:inherit}
-.hero{background:#6f3a0e;color:#fff;padding:70px 20px;text-align:center}
-.wrap{max-width:980px;margin:0 auto;padding:42px 20px}
-.logo{width:150px;max-width:70%;height:auto;display:block;margin:0 auto 16px}
-h1{margin:0;letter-spacing:.35em}
-.tagline{max-width:740px;margin:14px auto 0;font-size:15px;opacity:.95}
-.card{background:#fff;border-radius:14px;padding:28px;margin-bottom:20px;box-shadow:0 10px 26px rgba(0,0,0,.06)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.tile{background:rgba(245,241,235,.55);border:1px solid rgba(43,23,11,.10);border-radius:14px;padding:18px}
-.cta-row{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;background:#E1A54B;color:#2B170B;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:600}
-.footer{background:#2B170B;color:#fff;text-align:center;padding:22px 12px}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+:root{
+  --amber:#6F3A0E;
+  --glow:#E1A54B;
+  --linen:#F5F1EB;
+  --resin:#2B170B;
+  --moss:#6A7A5C;
+  --paper:#FFFFFF;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:var(--linen);
+  color:var(--resin);
+  line-height:1.75;
+}
+
+a{ color:inherit; }
+
+.hero{
+  background:var(--amber);
+  color:#fff;
+  padding:70px 20px 58px;
+  text-align:center;
+}
+
+.logo{
+  width:150px;
+  max-width:70%;
+  height:auto;
+  display:block;
+  margin:0 auto 16px;
+}
+
+h1{
+  font-family:'Cormorant Garamond', serif;
+  letter-spacing:0.35em;
+  font-weight:500;
+  margin:0;
+}
+
+.tagline{
+  max-width:740px;
+  margin:14px auto 0;
+  font-size:15px;
+  opacity:0.95;
+}
+
+.subtag{
+  margin:10px 0 0;
+  font-size:13px;
+  opacity:0.9;
+}
+
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:42px 20px;
+}
+
+.card{
+  background:var(--paper);
+  border-radius:14px;
+  padding:28px;
+  margin-bottom:20px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.06);
+}
+
+h2{
+  font-family:'Cormorant Garamond', serif;
+  letter-spacing:0.08em;
+  font-weight:500;
+  margin:0 0 14px;
+  font-size:22px;
+}
+
+h3{
+  font-family:'Cormorant Garamond', serif;
+  letter-spacing:0.06em;
+  font-weight:500;
+  margin:0 0 8px;
+}
+
+.small{
+  color:rgba(43,23,11,0.75);
+  font-size:13px;
+  margin:10px 0 0;
+}
+
+.tiny{
+  color:rgba(43,23,11,0.7);
+  font-size:12px;
+  margin:10px 0 0;
+}
+
+.muted{ color:rgba(43,23,11,0.65); }
+
+.whisper{
+  margin-top:12px;
+  font-style:italic;
+  color:var(--moss);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:16px;
+}
+
+.tile{
+  background:rgba(245,241,235,0.55);
+  border:1px solid rgba(43,23,11,0.10);
+  border-radius:14px;
+  padding:18px;
+}
+
+.tile:hover{
+  border-color: rgba(225,165,75,0.8);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.cta-row{
+  margin-top:18px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--glow);
+  color:var(--resin);
+  padding:10px 16px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:500;
+  white-space:nowrap;
+}
+
+.btn.ghost{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.70);
+}
+
+.footer{
+  background:var(--resin);
+  color:#fff;
+  text-align:center;
+  padding:22px 12px;
+}
+
+.product-hero{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap:18px;
+  align-items:start;
+}
+
+.product-img{
+  border-radius:14px;
+  background: linear-gradient(180deg, rgba(225,165,75,0.25), rgba(111,58,14,0.08));
+  border:1px solid rgba(43,23,11,0.12);
+  min-height:260px;
+  padding:18px;
+}
+
+.product-img p{
+  margin:0;
+  color:rgba(43,23,11,0.70);
+  font-size:13px;
+}
+
+.ritual{margin:0;padding-left:18px}
+.ritual li{margin:10px 0}
+
+@media (max-width: 780px){
+  .product-hero{ grid-template-columns: 1fr; }
+}
