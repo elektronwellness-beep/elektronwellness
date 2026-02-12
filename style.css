@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
 
 :root{
-  --amber:#6F3A0E;      /* Fossil Amber */
-  --glow:#E1A54B;       /* Sun Resin */
-  --linen:#F5F1EB;      /* Clay Linen */
-  --resin:#2B170B;      /* Dark Resin */
-  --moss:#6A7A5C;       /* Moss Shadow */
+  --amber:#6F3A0E;
+  --glow:#E1A54B;
+  --linen:#F5F1EB;
+  --resin:#2B170B;
+  --moss:#6A7A5C;
   --paper:#FFFFFF;
 }
 
@@ -99,12 +99,6 @@ h3{
 
 .muted{ color:rgba(43,23,11,0.65); }
 
-.ritual{
-  margin:0;
-  padding-left:18px;
-}
-.ritual li{ margin:10px 0; }
-
 .whisper{
   margin-top:12px;
   font-style:italic;
@@ -145,6 +139,7 @@ h3{
   border-radius:999px;
   text-decoration:none;
   font-weight:500;
+  white-space:nowrap;
 }
 
 .btn.ghost{
@@ -160,8 +155,7 @@ h3{
   padding:22px 12px;
 }
 
-/* ---------- Product page image placeholder layout ---------- */
-
+/* Product page layout */
 .product-hero{
   display:grid;
   grid-template-columns: 1.1fr 1fr;
@@ -186,13 +180,3 @@ h3{
 @media (max-width: 780px){
   .product-hero{ grid-template-columns: 1fr; }
 }
-
-/* Products page button layout (prevents breaking/wrapping issues) */
-.buy-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  align-items:center;
-  justify-content:flex-start;
-}
-.buy-row .btn{ white-space:nowrap; }
