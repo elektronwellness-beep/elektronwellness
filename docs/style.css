@@ -38,31 +38,67 @@ p:last-child{ margin-bottom:0; }
   padding:42px 20px;
 }
 
-/* Hero */
+/* HERO (intentional logo background) */
 .hero{
-  background: linear-gradient(180deg, rgba(111,58,14,1) 0%, rgba(43,23,11,1) 120%);
+  position: relative;
+  overflow: hidden;
   color:#fff;
   padding:70px 20px 58px;
   text-align:center;
+
+  /* base gradient */
+  background: radial-gradient(1200px 520px at 50% -10%, rgba(225,165,75,0.35), rgba(225,165,75,0.0) 60%),
+              linear-gradient(180deg, rgba(111,58,14,1) 0%, rgba(43,23,11,1) 120%);
 }
+
+/* logo watermark layer */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:-20px;
+  background-image: url("elektron-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 520px auto;
+  opacity: 0.10;              /* controls watermark strength */
+  filter: saturate(1.1) contrast(1.05);
+  transform: translateZ(0);
+  pointer-events:none;
+}
+
+/* dark overlay for readability */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.35));
+  pointer-events:none;
+}
+
+.hero .wrap{ position: relative; z-index: 1; }
+
 .logo{
   width:150px;
   max-width:70%;
   height:auto;
   margin:0 auto 16px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.20));
 }
+
 h1{
   font-family:'Cormorant Garamond', serif;
   letter-spacing:0.35em;
   font-weight:500;
   margin:0;
 }
+
 .tagline{
   max-width:760px;
   margin:14px auto 0;
   font-size:15px;
   opacity:0.96;
 }
+
 .subtag{
   margin:10px 0 0;
   font-size:13px;
@@ -180,4 +216,5 @@ h3{
   .card{ padding:22px; border-radius:14px; }
   .logo{ width:130px; }
   h1{ letter-spacing:0.28em; }
+  .hero::before{ background-size: 380px auto; opacity: 0.12; }
 }
