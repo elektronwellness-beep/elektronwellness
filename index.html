@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 
-<body>
+<body id="top">
 
 <header class="hero">
   <div class="wrap" style="padding:0;">
@@ -28,76 +28,158 @@
 
   <section class="card">
     <div class="grid">
-<div class="tile" style="border:2px solid var(--glow);">
-  <h3>The Return Ritual Set</h3>
-  <p class="small muted">Resin Root + Ember Intent (5 ml)</p>
-  <p class="small">A complete grounding ritual experience.</p>
 
-  <div class="cta-row" style="justify-content:flex-start;">
-    <a class="btn"
-       href="https://buy.stripe.com/00w3cu81b3iE39faIs0ZW03"
-       target="_blank"
-       rel="noopener">
-       Buy Set — $60
-    </a>
-  </div>
+      <div class="tile" style="border:2px solid var(--glow);">
+        <h3>The Return Ritual Set</h3>
+        <p class="small muted">Resin Root + Ember Intent (5 ml)</p>
+        <p class="small">A complete grounding ritual experience.</p>
 
-  <p class="tiny muted">Bundle pricing. Limited quantities.</p>
-</div>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn"
+             href="https://buy.stripe.com/00w3cu81b3iE39faIs0ZW03"
+             target="_blank"
+             rel="noopener">
+             Buy Set — $60
+          </a>
+        </div>
+
+        <p class="tiny muted">Bundle pricing. Limited quantities.</p>
+      </div>
 
       <!-- LIVE CHECKOUT -->
-      <div class="tile">
+      <div class="tile" id="resin-root">
         <h3>Resin Root</h3>
         <p class="small muted">Tumbled Baltic Amber Fossil • Random selection</p>
         <p class="small">“Hold. Ground. Remember.”</p>
-        <div class="cta-row" style="justify-content:flex-start;">
-          <a class="btn" target="_blank" rel="noopener" href="https://buy.stripe.com/3cI14m2GR3iE4dj4k40ZW00">Buy — $38</a>
-          <a class="btn" href="amber-fossil.html">Details</a>
+
+        <div class="cta-row" style="justify-content:flex-start; flex-wrap:wrap;">
+          <a class="btn"
+             target="_blank"
+             rel="noopener"
+             href="https://buy.stripe.com/3cI14m2GR3iE4dj4k40ZW00">
+             Buy — $38
+          </a>
+          <a class="btn ghost" href="#resin-root-details">Details</a>
         </div>
+
         <p class="tiny muted">Secure checkout powered by Stripe.</p>
       </div>
 
-      <div class="tile">
+      <div class="tile" id="ember-intent">
         <h3>Ember Intent</h3>
         <p class="small muted">Ritual Anointing Oil • 5 ml / 10 ml</p>
         <p class="small">“Anoint. Intend. Begin.”</p>
-        <div class="cta-row" style="justify-content:flex-start;">
-          <a class="btn" target="_blank" rel="noopener" href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01">Buy 5 ml — $28</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02">Buy 10 ml — $44</a>
-          <a class="btn" href="anointing-oil.html">Details</a>
+
+        <div class="cta-row" style="justify-content:flex-start; flex-wrap:wrap;">
+          <a class="btn"
+             target="_blank"
+             rel="noopener"
+             href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01">
+             Buy 5 ml — $28
+          </a>
+          <a class="btn"
+             target="_blank"
+             rel="noopener"
+             href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02">
+             Buy 10 ml — $44
+          </a>
+          <a class="btn ghost" href="#ember-intent-details">Details</a>
         </div>
+
         <p class="tiny muted">Secure checkout powered by Stripe.</p>
       </div>
 
       <!-- VISIBLE NOW / CHECKOUT LATER -->
-      <div class="tile">
+      <div class="tile" id="creams">
         <h3>Creams</h3>
         <p class="small muted">4oz / 8oz</p>
         <p class="small">Checkout coming next.</p>
         <div class="cta-row" style="justify-content:flex-start;">
-          <a class="btn" href="cream-template.html">View</a>
+          <a class="btn ghost" href="#coming-soon">Preview</a>
         </div>
       </div>
 
-      <div class="tile">
+      <div class="tile" id="scrubs">
         <h3>Scrubs</h3>
         <p class="small muted">2oz / 10oz</p>
         <p class="small">Checkout coming next.</p>
         <div class="cta-row" style="justify-content:flex-start;">
-          <a class="btn" href="scrub-template.html">View</a>
+          <a class="btn ghost" href="#coming-soon">Preview</a>
         </div>
       </div>
 
-      <div class="tile">
+      <div class="tile" id="teas">
         <h3>Loose-Leaf Teas</h3>
         <p class="small muted">4oz / 8oz jars</p>
         <p class="small">Checkout coming next.</p>
         <div class="cta-row" style="justify-content:flex-start;">
-          <a class="btn" href="tea-template.html">View</a>
+          <a class="btn ghost" href="#coming-soon">Preview</a>
         </div>
       </div>
 
     </div>
+
+    <!-- DETAILS (IN-PAGE) -->
+    <div style="margin-top:22px; display:grid; gap:14px;">
+
+      <div class="tile" id="resin-root-details">
+        <h3>Resin Root — Details</h3>
+        <p class="small muted">Tumbled Baltic amber fossil (random selection)</p>
+
+        <p class="small">
+          Resin Root is your physical ritual anchor — something you can hold when your mind is loud
+          and your body needs to return to the present.
+        </p>
+
+        <p class="small"><strong>Ritual use:</strong></p>
+        <ul class="small" style="margin-top:8px;">
+          <li>Hold the amber in your palm for 60 seconds.</li>
+          <li>Breathe in slowly. Exhale longer than you inhale.</li>
+          <li>Speak one word of intention: “Return.” “Ground.” “Here.”</li>
+        </ul>
+
+        <p class="tiny muted">
+          Note: Each piece is naturally unique in size, tone, and inclusions.
+        </p>
+
+        <a class="btn ghost" href="#resin-root">Back to Resin Root</a>
+      </div>
+
+      <div class="tile" id="ember-intent-details">
+        <h3>Ember Intent — Details</h3>
+        <p class="small muted">Ritual anointing oil • 5 ml / 10 ml</p>
+
+        <p class="small">
+          Ember Intent is a “begin again” ritual — a simple anointing practice to mark your intention,
+          soften your nervous system, and start from a centered place.
+        </p>
+
+        <p class="small"><strong>Ritual use:</strong></p>
+        <ul class="small" style="margin-top:8px;">
+          <li>Place a small amount on pulse points or hands.</li>
+          <li>Inhale slowly and visualize warmth in the body.</li>
+          <li>Say your intention out loud (or write it down immediately after).</li>
+        </ul>
+
+        <p class="tiny muted">
+          If you have sensitivities, patch test first.
+        </p>
+
+        <a class="btn ghost" href="#ember-intent">Back to Ember Intent</a>
+      </div>
+
+      <div class="tile" id="coming-soon">
+        <h3>Coming Next</h3>
+        <p class="small muted">Creams • Scrubs • Teas</p>
+        <p class="small">
+          These are visible now so you can see what’s planned for the next release.
+          Checkout will be added once mockups and labels are finalized.
+        </p>
+        <a class="btn ghost" href="#top">Back to top</a>
+      </div>
+
+    </div>
+
   </section>
 
 </main>
