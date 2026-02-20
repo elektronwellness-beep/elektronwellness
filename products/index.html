@@ -44,7 +44,7 @@
         <p class="tiny muted">Secure checkout powered by Stripe.</p>
       </div>
 
-      <div class="tile">
+      <div class="tile" id="resin-root">
         <h3>Resin Root</h3>
         <p class="small muted">Tumbled Baltic Amber Fossil • Random selection</p>
         <p class="small">“Hold. Ground. Remember.”</p>
@@ -56,18 +56,18 @@
              rel="noopener">
             Buy — $38
           </a>
-          <a class="btn" href="amber-fossil.html">Details</a>
+          <a class="btn ghost" href="#resin-root-details">Details</a>
         </div>
 
         <p class="tiny muted">Secure checkout powered by Stripe.</p>
       </div>
 
-      <div class="tile">
+      <div class="tile" id="ember-intent">
         <h3>Ember Intent</h3>
         <p class="small muted">Ritual Anointing Oil • 5 ml / 10 ml</p>
         <p class="small">“Anoint. Intend. Begin.”</p>
 
-        <div class="cta-row" style="justify-content:flex-start;">
+        <div class="cta-row" style="justify-content:flex-start; flex-wrap:wrap;">
           <a class="btn"
              href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01"
              target="_blank"
@@ -80,13 +80,41 @@
              rel="noopener">
             Buy 10 ml — $44
           </a>
-          <a class="btn" href="anointing-oil.html">Details</a>
+          <a class="btn ghost" href="#ember-intent-details">Details</a>
         </div>
 
         <p class="tiny muted">Secure checkout powered by Stripe.</p>
       </div>
 
     </div>
+
+    <!-- In-page detail sections to prevent 404s -->
+    <div style="margin-top:26px; display:grid; gap:14px;">
+      <div class="tile" id="resin-root-details">
+        <h3>Resin Root — Details</h3>
+        <p class="small muted">Tumbled Baltic amber fossil (random selection)</p>
+        <p class="small">
+          Use: Hold the amber in your palm, breathe slowly, and set a grounding intention.
+          Keep it on your altar, in your pocket, or with your journal as a ritual anchor.
+        </p>
+        <p class="tiny muted">Note: Each piece is naturally unique in shape, tone, and inclusions.</p>
+        <a class="btn ghost" href="#resin-root">Back to Resin Root</a>
+      </div>
+
+      <div class="tile" id="ember-intent-details">
+        <h3>Ember Intent — Details</h3>
+        <p class="small muted">Ritual anointing oil • 5 ml / 10 ml</p>
+        <p class="small">
+          Use: Place a small amount on pulse points or hands, inhale, and speak your intention.
+          Best used at the start of meditation, journaling, or before sleep to “begin again.”
+        </p>
+        <p class="tiny muted">If you have sensitivities, patch test first.</p>
+        <a class="btn ghost" href="#ember-intent">Back to Ember Intent</a>
+      </div>
+
+      <a class="btn ghost" href="#top" style="justify-self:start;">↑ Back to top</a>
+    </div>
+
   </section>
 
   <section class="card">
@@ -120,7 +148,8 @@
         <h3>Ritual Invitation Boxes</h3>
         <p class="small muted">Sample-size set + small amber stone</p>
         <p class="small">A guided entry into the ELEKTRON ritual.</p>
-        <a class="btn" href="ritual-invitation-box.html">View</a>
+        <!-- Prevent 404 until the page exists -->
+        <a class="btn" href="../index.html#ritual">Preview</a>
       </div>
 
       <div class="tile">
