@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ELEKTRON</title>
   <meta name="description" content="ELEKTRON Wellness Studio — a curated ritual brand rooted in amber, time, and intentional care." />
+
+  <!-- SAFETY STYLES: forces visibility even if style.css is broken -->
+  <style>
+    html, body { background:#fff !important; color:#111 !important; margin:0 !important; padding:0 !important; }
+    body { opacity:1 !important; }
+    * { visibility:visible !important; }
+    .wrap { max-width:980px !important; margin:0 auto !important; padding:18px !important; }
+    .hero { padding:18px !important; border-bottom:1px solid rgba(0,0,0,.12) !important; }
+    .logo { width:92px !important; height:auto !important; display:block !important; margin:0 0 12px 0 !important; }
+    .card { border:1px solid rgba(0,0,0,.12) !important; border-radius:14px !important; padding:18px !important; margin:16px 0 !important; background:#fff !important; }
+    .cta-row { display:flex !important; gap:10px !important; flex-wrap:wrap !important; margin-top:10px !important; }
+    .btn { display:inline-block !important; padding:10px 16px !important; border-radius:10px !important;
+      background:#111 !important; color:#fff !important; border:1px solid #111 !important; text-decoration:none !important; font-weight:600 !important; }
+    .btn.ghost { background:transparent !important; color:#111 !important; }
+    .small { font-size:14px !important; }
+    .whisper { color:#666 !important; font-style:italic !important; }
+    .footer { border-top:1px solid rgba(0,0,0,.12) !important; color:#666 !important; padding:18px !important; text-align:center !important; margin-top:26px !important; }
+  </style>
+
+  <!-- Your normal stylesheet (keep it) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -17,7 +37,7 @@
     <p class="subtag">Grounded. Empowered. Whole.</p>
 
     <div class="cta-row">
-      <a class="btn" href="products/index.html">Shop Products</a>
+      <a class="btn" href="products/">Shop Products</a>
       <a class="btn ghost" href="#ritual">The Ritual</a>
     </div>
   </div>
@@ -50,7 +70,7 @@
     </ol>
 
     <div class="cta-row" style="justify-content:flex-start;">
-      <a class="btn" href="products/index.html">Shop Products</a>
+      <a class="btn" href="products/">Shop Products</a>
     </div>
   </section>
 
