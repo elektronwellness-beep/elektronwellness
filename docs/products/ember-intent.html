@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ember Intent — ELEKTRON</title>
   <meta name="description" content="Ember Intent ritual anointing oil." />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../style.css?v=9001" />
 </head>
 
 <body>
 
 <header class="hero">
+
   <div class="wrap" style="padding:0;">
 
-    <a href="./index.html"
-       class="btn ghost"
-       style="display:inline-block; margin-bottom:14px;">
-       ← Back to Products
+    <a href="index.html" class="btn ghost" style="margin-bottom:16px;">
+      ← Back to Products
     </a>
 
-    <img src="../elektron-logo.png"
-         alt="ELEKTRON logo"
-         class="logo" />
+    <img src="../elektron-logo.png" alt="ELEKTRON logo" class="logo"/>
 
-    <h1>ELEKTRON</h1>
+    <h1>Ember Intent</h1>
 
-    <p class="tagline">Ember Intent</p>
+    <p class="tagline">
+      Ritual Anointing Oil
+    </p>
 
-    <p class="subtag">Ritual Anointing Oil</p>
+    <p class="subtag">
+      Begin • Mark • Activate
+    </p>
 
   </div>
+
 </header>
 
 
@@ -37,18 +39,17 @@
 
   <section class="card">
 
-    <h2>Ember Intent</h2>
+    <h2>Overview</h2>
 
-    <p class="small muted">
-      Ritual Anointing Oil • 5 ml / 10 ml
+    <p class="small">
+      Ember Intent is a ritual anointing oil designed to mark the beginning
+      of intentional space. Applied to skin, objects, or ritual tools,
+      it signals presence and conscious return.
     </p>
 
     <p class="small">
-      Ember Intent is designed to mark intentional beginnings and reconnect the mind and body through scent, touch, and presence.
-    </p>
-
-    <p class="small">
-      It serves as a ceremonial opening — a signal to slow down, center, and begin with awareness.
+      Oil has been used across cultures for ritual activation, grounding,
+      and embodiment.
     </p>
 
   </section>
@@ -56,17 +57,25 @@
 
   <section class="card">
 
-    <h2>Ritual Use</h2>
+    <h2>Use</h2>
 
-    <ol class="small" style="margin-top:10px;">
+    <ol class="small">
 
-      <li><strong>Anoint.</strong> Apply a small amount to pulse points or palms.</li>
+      <li>
+        Apply a small amount to wrists, palms, or chest.
+      </li>
 
-      <li><strong>Inhale.</strong> Breathe slowly and fully.</li>
+      <li>
+        Breathe slowly.
+      </li>
 
-      <li><strong>Intend.</strong> Speak or hold your intention clearly.</li>
+      <li>
+        Set intention.
+      </li>
 
-      <li><strong>Begin.</strong> Move forward from a grounded state.</li>
+      <li>
+        Begin ritual or meditation.
+      </li>
 
     </ol>
 
@@ -75,57 +84,69 @@
 
   <section class="card">
 
-    <h2>Purchase</h2>
+    <h2>Details</h2>
 
-    <div class="cta-row" style="justify-content:flex-start; margin-top:14px; flex-wrap:wrap;">
+    <p class="small">
 
-      <a class="btn"
-         href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01"
-         target="_blank"
-         rel="noopener">
+      • Ritual anointing oil  
+      <br>
+      • Available in 5 ml and 10 ml  
+      <br>
+      • Amber glass vial  
+      <br>
+      • Hand prepared  
 
-         Buy 5 ml — $28
-
-      </a>
-
-      <a class="btn"
-         href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02"
-         target="_blank"
-         rel="noopener">
-
-         Buy 10 ml — $44
-
-      </a>
-
-      <a class="btn ghost"
-         href="./index.html">
-
-         Back to Products
-
-      </a>
-
-    </div>
-
-    <p class="tiny muted" style="margin-top:10px;">
-      Secure checkout powered by Stripe.
     </p>
 
   </section>
 
 
+  <section class="card">
+
+    <h2>Purchase</h2>
+
+    <div class="cta-row">
+
+      <a
+        class="btn"
+        href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01"
+        target="_blank"
+        rel="noopener"
+      >
+        Buy 5 ml — $28
+      </a>
+
+      <a
+        class="btn ghost"
+        href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02"
+        target="_blank"
+        rel="noopener"
+      >
+        Buy 10 ml — $44
+      </a>
+
+    </div>
+
+    <p class="tiny muted">
+      Secure checkout powered by Stripe.
+    </p>
+
+  </section>
+
 </main>
 
 
 <footer class="footer">
-
-  © <span id="year"></span>
-  ELEKTRON Wellness Studio • Founder: Cecilia Jordan
-
+  © <span id="year"></span> ELEKTRON Wellness Studio
 </footer>
 
 
 <script>
-document.getElementById("year").textContent =
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>document.getElementById("year").textContent =
 new Date().getFullYear();
 </script>
 
