@@ -3,92 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ELEKTRON Products</title>
-  <meta name="description" content="ELEKTRON ritual offerings." />
+  <title>ELEKTRON — Products</title>
+  <meta name="description" content="Shop ELEKTRON ritual offerings." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
 
 <header class="hero">
-
   <div class="wrap">
 
-    <a href="../index.html" class="btn ghost">
+    <a href="../index.html" class="btn ghost" style="align-self:flex-start;">
       ← Back to Home
     </a>
 
-    <!-- LOGO ONLY — ELEKTRON text removed -->
+    <!-- Logo only (no standalone ELEKTRON word) -->
+    <img src="../elektron-logo.png" alt="ELEKTRON logo" class="logo" />
 
-    <img
-      src="../elektron-logo.png"
-      alt="ELEKTRON logo"
-      class="logo"
-    />
-
-    <p class="tagline">
+    <p class="tagline" style="margin:0;">
       Ritual Offerings
     </p>
 
-  </div>
+    <p class="subtag" style="margin:0;">
+      Available now + coming soon.
+    </p>
 
+  </div>
 </header>
 
 <main class="wrap">
 
-<section class="card">
+  <!-- AVAILABLE NOW -->
+  <section class="card">
+    <h2>Available Now</h2>
+    <p class="small">Secure checkout powered by Stripe.</p>
 
-<h2>Available Now</h2>
+    <div class="grid">
 
-<div class="grid">
+      <!-- RETURN RITUAL SET -->
+      <div class="tile" style="border:1px solid rgba(255,255,255,.18);">
+        <h3>The Return Ritual Set</h3>
+        <p class="small muted">Resin Root + Ember Intent (5 ml)</p>
+        <p class="small">A complete grounding ritual experience.</p>
 
-<div class="tile">
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn"
+             href="https://buy.stripe.com/00w3cu81b3iE39faIs0ZW03"
+             target="_blank"
+             rel="noopener">
+            Buy Set
+          </a>
+        </div>
 
-<h3>Resin Root</h3>
+        <p class="tiny muted">Bundle pricing. Limited quantities.</p>
+      </div>
 
-<p class="small">
-Tumbled Baltic amber fossil ritual anchor.
-</p>
+      <!-- RESIN ROOT -->
+      <div class="tile">
+        <h3>Resin Root</h3>
+        <p class="small muted">Tumbled Baltic Amber Fossil • Random selection</p>
+        <p class="small">“Hold. Ground. Remember.”</p>
 
-<a class="btn"
-href="https://buy.stripe.com/3cI14m2GR3iE4dj4k40ZW00"
-target="_blank">
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn"
+             href="https://buy.stripe.com/3cI14m2GR3iE4dj4k40ZW00"
+             target="_blank"
+             rel="noopener">
+            Buy — $38
+          </a>
+        </div>
 
-Buy — $38
+        <p class="tiny muted">Secure checkout powered by Stripe.</p>
+      </div>
 
-</a>
+      <!-- EMBER INTENT -->
+      <div class="tile">
+        <h3>Ember Intent</h3>
+        <p class="small muted">Ritual Anointing Oil • 5 ml / 10 ml</p>
+        <p class="small">“Anoint. Intend. Begin.”</p>
 
-</div>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn"
+             href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01"
+             target="_blank"
+             rel="noopener">
+            Buy 5 ml — $28
+          </a>
+          <a class="btn"
+             href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02"
+             target="_blank"
+             rel="noopener">
+            Buy 10 ml — $44
+          </a>
+        </div>
 
-<div class="tile">
+        <p class="tiny muted">Secure checkout powered by Stripe.</p>
+      </div>
 
-<h3>Ember Intent</h3>
+    </div>
+  </section>
 
-<p class="small">
-Ritual anointing oil.
-</p>
+  <!-- COMING SOON -->
+  <section class="card" id="coming-soon">
+    <h2>Coming Soon</h2>
+    <p class="small">These are visible for layout and copy. Checkout will be added after mockups are finalized.</p>
 
-<a class="btn"
-href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01"
-target="_blank">
+    <div class="grid">
 
-Buy — $28
+      <div class="tile">
+        <h3>Ritual Creams</h3>
+        <p class="small muted">4oz / 8oz</p>
+        <p class="small">Warm, grounding body care.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn" href="cream-template.html">View</a>
+        </div>
+      </div>
 
-</a>
+      <div class="tile">
+        <h3>Ritual Scrubs</h3>
+        <p class="small muted">2oz / 10oz</p>
+        <p class="small">Textural renewal through touch.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn" href="scrub-template.html">View</a>
+        </div>
+      </div>
 
-</div>
+      <div class="tile">
+        <h3>Loose-Leaf Teas</h3>
+        <p class="small muted">4oz / 8oz jars</p>
+        <p class="small">Stillness in the cup.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn" href="tea-template.html">View</a>
+        </div>
+      </div>
 
-</div>
+      <!-- These have NO links so they cannot 404 -->
+      <div class="tile">
+        <h3>Handmade Soaps</h3>
+        <p class="small muted">Hand-cut bars • small batch</p>
+        <p class="small">Cleanse as a ceremony — not a chore.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
 
-</section>
+      <div class="tile">
+        <h3>Ritual Space Cleanser</h3>
+        <p class="small muted">Surface spray</p>
+        <p class="small">For cleansing altars, tools, and ritual areas.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h3>Ritual Face Masks</h3>
+        <p class="small muted">Softening • renewing</p>
+        <p class="small">A pause for skin and spirit.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h3>Beeswax Candles &amp; Scented Melts</h3>
+        <p class="small muted">Natural beeswax • ritual aroma</p>
+        <p class="small">Warm the room. Signal the return.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h3>Aromatherapy Sprays</h3>
+        <p class="small muted">Room + body mist</p>
+        <p class="small">Air becomes atmosphere.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h3>Jewelry</h3>
+        <p class="small muted">Wearable ritual • amber adornment</p>
+        <p class="small">Carry the ritual with you.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h3>Artwork Prints</h3>
+        <p class="small muted">Abstract ritual art</p>
+        <p class="small">A visual anchor for your space.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="tile">
+        <h3>Self-Help Journal Workbooks</h3>
+        <p class="small muted">Guided prompts • ritual practice</p>
+        <p class="small">Write your way back to yourself.</p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="#coming-soon" style="pointer-events:none; opacity:.75;">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 </main>
 
 <footer class="footer">
-
-© 2026 ELEKTRON Wellness Studio
-
+  © <span id="year"></span> ELEKTRON Wellness Studio
 </footer>
 
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
-</html></html>
+</html>
