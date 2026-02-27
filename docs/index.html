@@ -1,79 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>ELEKTRON Wellness Studio</title>
-  <meta name="description" content="ELEKTRON ritual offerings rooted in amber, time, and intentional care." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: inherit;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .spacer {
+      margin: 60px 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 14px 28px;
+      text-decoration: none;
+      border: 1px solid currentColor;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <div class="wrap">
+  <div class="container">
 
-    <img
-      src="elektron-logo.png"
-      alt="ELEKTRON Wellness Studio logo"
-      class="logo"
-    />
+    <h1>ELEKTRON</h1>
 
-    <p class="tagline">
-      Ancient natural alchemy of restoration and growth to peace within.
+    <p><strong>A Ritual for the Mind and Body</strong></p>
+
+    <p>
+      There is a way to return to yourself.
+      Not through escape — but through intentional practice.
     </p>
 
-    <p class="subtag">
-      Grounded. Empowered. Whole.
-    </p>
+    <div class="spacer"></div>
 
-    <div class="cta-row">
-      <a class="btn" href="products/">
-        Shop Products
-      </a>
-    </div>
+    <a href="products/30-day-ritual.html" class="cta-button">
+      ENTER THE RITUAL
+    </a>
+
+    <a href="products/index.html" class="cta-button">
+      EXPLORE OFFERINGS
+    </a>
+
+    <div class="spacer"></div>
+
+    <section>
+      <h2>WHAT ELEKTRON IS</h2>
+
+      <p>
+        ELEKTRON is a refined ritual system designed to cultivate presence,
+        steadiness, and inner alignment.
+      </p>
+
+      <p>
+        It is not a product line.
+        It is a daily devotion.
+      </p>
+
+      <p>
+        Each offering is created to support a structured return —
+        to stillness, clarity, and embodied awareness.
+      </p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <section>
+      <h2>WHY RITUAL</h2>
+
+      <p>
+        Ritual is the space between stimulus and response.
+        It is the pause that restores sovereignty.
+      </p>
+
+      <p>
+        In a world that fragments attention,
+        ritual gathers it.
+      </p>
+
+      <p>
+        Through repetition and intention,
+        the ordinary becomes sacred.
+        The scattered becomes centered.
+      </p>
+    </section>
+
+    <div class="spacer"></div>
+
+    <footer>
+      <p>© 2026 ELEKTRON Wellness Studio</p>
+    </footer>
 
   </div>
-</header>
-
-<main class="wrap">
-
-  <section class="card" id="ritual">
-    <h2>The ELEKTRON Ritual</h2>
-
-    <p class="small">
-      Smell the product. Hold the amber stone. Breathe.
-      Let your body decide the pace.
-      Sacred, ceremonial, intuitive, personal, and grounding.
-    </p>
-
-    <ol class="small">
-      <li><strong>Arrive.</strong> Pause. Three slow breaths.</li>
-      <li><strong>Anchor.</strong> Hold your amber or place it near you.</li>
-      <li><strong>Anoint.</strong> Mark the beginning with oil.</li>
-      <li><strong>Embodiment.</strong> Choose cream, scrub, or tea — and move slowly.</li>
-      <li><strong>Close.</strong> One final breath. Grounded. Empowered. Whole.</li>
-    </ol>
-  </section>
-
-  <section class="card">
-    <h2>Brand Positioning</h2>
-
-    <p class="small">
-      ELEKTRON is a curated ritual brand rooted in amber, time, and intentional care.
-      Our offerings are designed to support presence through warmth, aroma, and grounding.
-    </p>
-  </section>
-
-</main>
-
-<footer class="footer">
-  © <span id="year"></span> ELEKTRON Wellness Studio
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
