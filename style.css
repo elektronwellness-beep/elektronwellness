@@ -1,71 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ELEKTRON</title>
-  <meta name="description" content="ELEKTRON Wellness Studio — ritual offerings rooted in amber, time, and intentional care." />
-  <link rel="stylesheet" href="style.css" />
-</head>
+:root{
+  --bg:#0f0f10;
+  --card:#151517;
+  --text:#f4f2ee;
+  --muted:#c8c4bc;
+  --line:rgba(255,255,255,.14);
+}
 
-<body>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.6;
+}
 
-<header class="hero">
-  <div class="wrap" style="padding:0;">
-    <img src="elektron-logo.png" alt="ELEKTRON logo" class="logo" />
-    <h1>ELEKTRON</h1>
-    <p class="tagline">Ancient natural alchemy of restoration and growth to peace within.</p>
+.wrap{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 18px;
+}
 
-    <div class="cta-row">
-      <a class="btn" href="products/index.html">Shop Products</a>
-      <a class="btn ghost" href="#ritual">The Ritual</a>
-    </div>
-  </div>
-</header>
+.hero{
+  border-bottom: 1px solid var(--line);
+}
 
-<main class="wrap">
+.logo{
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
 
-  <section class="card" id="ritual">
-    <h2>The ELEKTRON Ritual</h2>
-    <p>
-      This is not a rush. It is a return. A slow practice of presence through touch, warmth, aroma, and stillness.
-    </p>
+h1,h2{margin: 0 0 12px}
+h1{letter-spacing:.12em}
+.tagline{color:var(--muted); margin-top: 8px}
 
-    <ol class="ritual">
-      <li><strong>Arrive.</strong> Pause. Three slow breaths.</li>
-      <li><strong>Anchor.</strong> Hold your amber or place it near you.</li>
-      <li><strong>Anoint.</strong> Mark the beginning with Ember Intent.</li>
-      <li><strong>Embodiment.</strong> Choose cream, scrub, or tea — and move slowly.</li>
-      <li><strong>Close.</strong> One final breath. Grounded. Empowered. Whole.</li>
-    </ol>
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px;
+  margin: 18px 0;
+}
 
-    <div class="cta-row" style="justify-content:flex-start;">
-      <a class="btn" href="products/index.html">Shop Products</a>
-    </div>
-  </section>
+.whisper{
+  color: var(--muted);
+}
 
-  <section class="card">
-    <h2>Our Ritual Statement</h2>
-    <p>
-      ELEKTRON is a ceremonial wellness studio rooted in amber, time, and intentional care.
-      Every offering is designed to support presence — not promises. A moment to soften, to listen, and to come home to yourself.
-    </p>
-    <p class="whisper">Not a rush. A return.</p>
-  </section>
+.cta-row{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+}
 
-</main>
+.btn{
+  display:inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration:none;
+}
 
-<footer class="footer">
-  © <span id="year"></span> ELEKTRON Wellness Studio
-</footer>
+.btn.ghost{
+  background: transparent;
+}
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-.ritual{margin:0;padding-left:18px}
-.ritual li{margin:10px 0}
+.footer{
+  border-top: 1px solid var(--line);
+  text-align:center;
+  padding: 22px 18px;
+  color: var(--muted);
+}
 
-</body>
-</html>
-.ritual{margin:0;padding-left:18px}
-.ritual li{margin:10px 0}
+.ritual{margin:0; padding-left: 18px}
+.ritual li{margin: 10px 0}
+
+.list{margin:0; padding-left: 18px}
+.list li{margin: 10px 0}
