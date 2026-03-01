@@ -1,157 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELEKTRON Wellness Studio</title>
-
-<style>
-body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#f8f7f5;
-  color:#111;
-  line-height:1.6;
-}
-
-.container{
-  max-width:1000px;
-  margin:0 auto;
-  padding:80px 20px;
-  text-align:center;
-}
-
-.logo{
-  max-width:180px;
-  margin-bottom:20px;
-}
-
-h1{
-  font-size:42px;
-  font-weight:800;
-  margin:0 0 10px;
-  letter-spacing:1px;
-}
-
-.tagline{
-  font-size:18px;
-  color:#555;
-  margin-bottom:60px;
-}
-
-.section{
-  margin-bottom:80px;
-}
-
-.section h2{
-  font-size:28px;
-  margin-bottom:10px;
-  font-weight:800;
-}
-
-.section p{
-  max-width:700px;
-  margin:0 auto 20px auto;
-  color:#444;
-}
-
-.button{
-  display:inline-block;
-  padding:16px 28px;
-  border-radius:8px;
-  font-weight:700;
-  text-decoration:none;
-  letter-spacing:0.5px;
-  border:1px solid #111;
-  transition:all 0.2s ease;
-  margin-top:10px;
-}
-
-.primary{
-  background:#111;
-  color:#fff;
-}
-
-.primary:hover{
-  background:#000;
-  border-color:#000;
-}
-
-.secondary{
-  background:transparent;
-  color:#111;
-}
-
-.secondary:hover{
-  background:#111;
-  color:#fff;
-}
-
-.divider{
-  width:60%;
-  height:1px;
-  background:#ddd;
-  margin:60px auto;
-}
-
-.footer{
-  font-size:14px;
-  color:#777;
-  margin-top:80px;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELEKTRON</title>
+  <meta name="description" content="The Ritual Begins With Reset. Phase I of The ELEKTRON Ritual Method." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div class="container">
+<header class="hero">
+  <div class="wrap" style="padding:0;">
+    <img src="elektron-logo.png" alt="ELEKTRON logo" class="logo" />
 
-  <img src="elektron-logo.png" alt="ELEKTRON Logo" class="logo">
-
-  <h1>ELEKTRON</h1>
-  <div class="tagline">
-    Structured ritual containers for mental, emotional, and energetic recalibration.
-  </div>
-
-  <!-- 30-Day Reset -->
-  <div class="section">
-    <h2>30-Day Reset — $333</h2>
-    <p>
-      A disciplined 30-day ritual container designed for full recalibration.
-      This is structured transformation through daily guided integration.
+    <h1>The Ritual Begins With Reset.</h1>
+    <p class="tagline">
+      30-Day Ritual Reset - Phase I of The ELEKTRON Ritual Method
     </p>
 
-    <a href="https://buy.stripe.com/3cI00idlvf1m6lraIs0ZW05"
-       target="_blank"
-       rel="noopener"
-       class="button primary">
-       Begin the 30-Day Reset
-    </a>
+    <div class="cta-row">
+      <!-- Stripe: 30-Day Reset ($333) -->
+      <a class="btn" href="https://buy.stripe.com/3cI00idlvf1m6lraIs0ZW05" target="_blank" rel="noopener">
+        Begin Reset — $333
+      </a>
+
+      <!-- Keep your existing link -->
+      <a class="btn ghost" href="products/30-day-ritual.html">
+        View Reset Details
+      </a>
+
+      <a class="btn ghost" href="products/index.html">
+        Shop Products
+      </a>
+    </div>
+
+    <!-- Stripe: 7-Day Ground ($144) -->
+    <div class="cta-row" style="margin-top:12px;">
+      <a class="btn ghost" href="https://buy.stripe.com/3cI6oGdlv5qM117aIs0ZW04" target="_blank" rel="noopener">
+        Enter Ground — 7 Day — $144
+      </a>
+      <a class="btn ghost" href="products/7-day-grounding.html">
+        View Ground Details
+      </a>
+    </div>
+
   </div>
+</header>
 
-  <div class="divider"></div>
+<main class="wrap">
 
-  <!-- 7-Day Ground -->
-  <div class="section">
-    <h2>Ground — 7 Day Intensive — $144</h2>
+  <section class="card">
+    <h2>Not Motivation. Discipline.</h2>
     <p>
-      A focused 7-day recalibration for stabilization and centering.
-      Ideal as preparation before deeper ritual work or as a standalone reset.
+      This is not inspiration.<br>
+      It is repetition.<br>
+      It is rhythm restored.
     </p>
+  </section>
 
-    <a href="https://buy.stripe.com/3cI6oGdlv5qM117aIs0ZW04"
-       target="_blank"
-       rel="noopener"
-       class="button secondary">
-       Enter Ground
-    </a>
-  </div>
+  <section class="card">
+    <h2>The ELEKTRON Ritual Method</h2>
+    <p>
+      A structured ceremonial progression designed to restore stability and embodied presence.
+    </p>
+    <p class="whisper">
+      RESET -> GROUND -> SUSTAIN
+    </p>
+  </section>
 
-  <div class="footer">
-    © 2026 ELEKTRON Wellness Studio
-  </div>
+  <!-- New: Ground Card (keeps your hierarchy intact) -->
+  <section class="card">
+    <h2>Enter Ground</h2>
+    <p>
+      7 days of stabilization.<br>
+      A short recalibration container to restore center and readiness.
+    </p>
+    <div class="cta-row" style="justify-content:flex-start;">
+      <a class="btn" href="https://buy.stripe.com/3cI6oGdlv5qM117aIs0ZW04" target="_blank" rel="noopener">
+        Buy Ground — $144
+      </a>
+      <a class="btn ghost" href="products/7-day-grounding.html">
+        View Ground
+      </a>
+    </div>
+  </section>
 
-</div>
+  <section class="card">
+    <h2>Start With Reset</h2>
+    <p>
+      30 consecutive days.<br>
+      Weekly reflection required.<br>
+      Completion is earned.
+    </p>
+    <div class="cta-row" style="justify-content:flex-start;">
+      <!-- Stripe: 30-Day Reset -->
+      <a class="btn" href="https://buy.stripe.com/3cI00idlvf1m6lraIs0ZW05" target="_blank" rel="noopener">
+        Buy Reset — $333
+      </a>
+
+      <!-- Keep your existing link -->
+      <a class="btn ghost" href="products/30-day-ritual.html">
+        View Reset
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  &copy; <span id="year"></span> ELEKTRON Wellness Studio
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
