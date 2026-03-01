@@ -12,7 +12,8 @@
 
 <header class="hero">
   <div class="wrap" style="padding:0;">
-    <img src="elektron-logo.png" alt="ELEKTRON logo" class="logo" />
+    <!-- Logo path fixed (logo is in repo root, site is served from /docs) -->
+    <img src="../elektron-logo.png" alt="ELEKTRON logo" class="logo" />
 
     <h1>The Ritual Begins With Reset.</h1>
     <p class="tagline">
@@ -24,27 +25,8 @@
       <a class="btn" href="https://buy.stripe.com/3cI00idlvf1m6lraIs0ZW05" target="_blank" rel="noopener">
         Begin Reset — $333
       </a>
-
-      <!-- Keep your existing link -->
-      <a class="btn ghost" href="products/30-day-ritual.html">
-        View Reset Details
-      </a>
-
-      <a class="btn ghost" href="products/index.html">
-        Shop Products
-      </a>
+      <a class="btn ghost" href="products/index.html">Shop Products</a>
     </div>
-
-    <!-- Stripe: 7-Day Ground ($144) -->
-    <div class="cta-row" style="margin-top:12px;">
-      <a class="btn ghost" href="https://buy.stripe.com/3cI6oGdlv5qM117aIs0ZW04" target="_blank" rel="noopener">
-        Enter Ground — 7 Day — $144
-      </a>
-      <a class="btn ghost" href="products/7-day-grounding.html">
-        View Ground Details
-      </a>
-    </div>
-
   </div>
 </header>
 
@@ -69,23 +51,6 @@
     </p>
   </section>
 
-  <!-- New: Ground Card (keeps your hierarchy intact) -->
-  <section class="card">
-    <h2>Enter Ground</h2>
-    <p>
-      7 days of stabilization.<br>
-      A short recalibration container to restore center and readiness.
-    </p>
-    <div class="cta-row" style="justify-content:flex-start;">
-      <a class="btn" href="https://buy.stripe.com/3cI6oGdlv5qM117aIs0ZW04" target="_blank" rel="noopener">
-        Buy Ground — $144
-      </a>
-      <a class="btn ghost" href="products/7-day-grounding.html">
-        View Ground
-      </a>
-    </div>
-  </section>
-
   <section class="card">
     <h2>Start With Reset</h2>
     <p>
@@ -94,14 +59,28 @@
       Completion is earned.
     </p>
     <div class="cta-row" style="justify-content:flex-start;">
-      <!-- Stripe: 30-Day Reset -->
+      <!-- Keep your details page -->
+      <a class="btn ghost" href="products/30-day-ritual.html">View Reset</a>
+      <!-- Stripe checkout -->
       <a class="btn" href="https://buy.stripe.com/3cI00idlvf1m6lraIs0ZW05" target="_blank" rel="noopener">
         Buy Reset — $333
       </a>
+    </div>
+  </section>
 
-      <!-- Keep your existing link -->
-      <a class="btn ghost" href="products/30-day-ritual.html">
-        View Reset
+  <!-- Ground card added using your existing layout pattern -->
+  <section class="card">
+    <h2>Enter Ground</h2>
+    <p>
+      7 days of stabilization.<br>
+      A short recalibration container to restore center and readiness.
+    </p>
+    <div class="cta-row" style="justify-content:flex-start;">
+      <!-- Ground details page you already have in /products -->
+      <a class="btn ghost" href="products/7-day-grounding.html">View Ground</a>
+      <!-- Stripe checkout -->
+      <a class="btn" href="https://buy.stripe.com/3cI6oGdlv5qM117aIs0ZW04" target="_blank" rel="noopener">
+        Buy Ground — $144
       </a>
     </div>
   </section>
