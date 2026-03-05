@@ -4,6 +4,10 @@
   --text:#f4f2ee;
   --muted:#c8c4bc;
   --line:rgba(255,255,255,.14);
+
+  /* GOLD ACCENT */
+  --gold:#c8a86a;
+  --gold-light:#e0c48a;
 }
 
 *{box-sizing:border-box}
@@ -16,7 +20,7 @@ html,body{
 body{
   background:var(--bg);
   color:var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   line-height:1.6;
 }
 
@@ -30,7 +34,6 @@ body{
   border-bottom:1px solid var(--line);
 }
 
-/* LOGO SIZE */
 .logo{
   width:220px;
   height:auto;
@@ -71,22 +74,78 @@ h1{
   margin-top:18px;
 }
 
+/* MAIN BUTTON STYLE */
+
 .btn{
   display:inline-block;
-  padding:12px 18px;
+  padding:12px 20px;
+
   border-radius:999px;
-  border:1px solid var(--line);
-  color:var(--text);
+
+  background:linear-gradient(
+    to bottom,
+    #1a1a1c,
+    #0f0f10
+  );
+
+  border:1px solid var(--gold);
+
+  color:var(--gold-light);
+
   text-decoration:none;
+
+  font-weight:500;
+  letter-spacing:.06em;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 4px 10px rgba(0,0,0,.45);
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease,
+    background .15s ease;
 }
 
+/* HOVER EFFECT */
+
 .btn:hover{
-  background:rgba(255,255,255,.05);
+  transform:translateY(-2px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 8px 18px rgba(0,0,0,.55);
+
+  background:linear-gradient(
+    to bottom,
+    #1f1f22,
+    #101012
+  );
 }
+
+/* CLICK EFFECT */
+
+.btn:active{
+  transform:translateY(1px);
+
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,.6);
+}
+
+/* SECONDARY BUTTON */
 
 .btn.ghost{
   background:transparent;
+  border:1px solid var(--line);
+  color:var(--text);
 }
+
+.btn.ghost:hover{
+  border-color:var(--gold);
+  color:var(--gold-light);
+}
+
+/* FOOTER */
 
 .footer{
   border-top:1px solid var(--line);
@@ -94,6 +153,8 @@ h1{
   padding:22px 18px;
   color:var(--muted);
 }
+
+/* LISTS */
 
 .ritual{
   margin:0;
@@ -113,6 +174,8 @@ h1{
   margin:10px 0;
 }
 
+/* FOUNDING MEMBER COUNTER */
+
 .founding-counter{
   text-align:center;
   margin:30px 0;
@@ -124,7 +187,8 @@ h1{
   letter-spacing:.05em;
 }
 
-/* RITUAL PATH (visual system section) */
+/* RITUAL PATH */
+
 .path{
   display:flex;
   gap:12px;
@@ -156,7 +220,7 @@ h1{
 }
 
 .path-arrow{
-  color:var(--muted);
+  color:var(--gold);
   font-size:22px;
   line-height:1;
   padding:6px 4px;
