@@ -30,11 +30,12 @@ body{
   border-bottom:1px solid var(--line);
 }
 
+/* LOGO SIZE FIX */
 .logo{
-  max-width:170px;
+  width:220px;
   height:auto;
   display:block;
-  margin:0 auto 14px;
+  margin:0 auto 18px;
 }
 
 h1,h2{
