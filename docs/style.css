@@ -30,7 +30,7 @@ body{
   border-bottom:1px solid var(--line);
 }
 
-/* LOGO SIZE FIX */
+/* LOGO SIZE */
 .logo{
   width:220px;
   height:auto;
@@ -122,4 +122,42 @@ h1{
   font-size:36px;
   font-weight:600;
   letter-spacing:.05em;
+}
+
+/* RITUAL PATH (visual system section) */
+.path{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  margin-top:16px;
+}
+
+.path-step{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px 16px;
+  min-width:170px;
+  text-align:center;
+}
+
+.path-step .kicker{
+  color:var(--muted);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+
+.path-step .title{
+  font-size:18px;
+  letter-spacing:.10em;
+}
+
+.path-arrow{
+  color:var(--muted);
+  font-size:22px;
+  line-height:1;
+  padding:6px 4px;
 }
