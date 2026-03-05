@@ -26,11 +26,10 @@ body{
 }
 
 .logo{
-  max-width: 190px;     /* increased from 120px */
-  width: 100%;
+  max-width: 170px;
   height: auto;
   display: block;
-  margin: 0 auto 12px;
+  margin: 0 auto 14px;
 }
 
 h1,h2{margin: 0 0 12px}
