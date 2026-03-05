@@ -5,10 +5,10 @@
   --muted:#c8c4bc;
   --line:rgba(255,255,255,.14);
 
-  /* GOLD ACCENT */
-  --gold:#c8a86a;
-  --gold-light:#e0c48a;
-  --gold-glow:rgba(200,168,106,.35);
+  /* AMBER COLORS MATCHING LOGO */
+  --amber:#d08a2f;
+  --amber-light:#e6a64a;
+  --amber-glow:rgba(208,138,47,.35);
 }
 
 *{box-sizing:border-box}
@@ -42,10 +42,10 @@ body{
   margin:0 auto 18px;
 }
 
-/* HEADINGS MATCH BUTTON GOLD */
+/* HEADINGS MATCH AMBER COLOR */
 h1,h2,h3{
   margin:0 0 12px;
-  color:var(--gold-light);
+  color:var(--amber-light);
 }
 
 h1{
@@ -74,19 +74,18 @@ h3{
   position:relative;
 }
 
-/* THIN AMBER DIVIDER WITH SUBTLE GLOW BETWEEN CARDS */
+/* AMBER DIVIDER WITH GLOW */
 .card::after{
   content:"";
   display:block;
   height:1px;
   width:100%;
   margin-top:26px;
-  background:linear-gradient(to right, transparent, var(--gold), transparent);
-  box-shadow:0 0 10px var(--gold-glow);
+  background:linear-gradient(to right, transparent, var(--amber), transparent);
+  box-shadow:0 0 10px var(--amber-glow);
   opacity:.8;
 }
 
-/* Don’t add divider after the last card in main */
 main .card:last-of-type::after{
   display:none;
 }
@@ -103,17 +102,18 @@ main .card:last-of-type::after{
   margin-top:18px;
 }
 
-/* MAIN BUTTON STYLE */
+/* BUTTON STYLE */
 .btn{
   display:inline-block;
   padding:12px 20px;
   border-radius:999px;
 
   background:linear-gradient(to bottom,#1a1a1c,#0f0f10);
-  border:1px solid var(--gold);
-  color:var(--gold-light);
+  border:1px solid var(--amber);
 
+  color:var(--amber-light);
   text-decoration:none;
+
   font-weight:500;
   letter-spacing:.06em;
 
@@ -124,16 +124,16 @@ main .card:last-of-type::after{
   transition:
     transform .15s ease,
     box-shadow .15s ease,
-    background .15s ease,
-    color .15s ease,
-    border-color .15s ease;
+    background .15s ease;
 }
 
 .btn:hover{
   transform:translateY(-2px);
+
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.12),
     0 8px 18px rgba(0,0,0,.55);
+
   background:linear-gradient(to bottom,#1f1f22,#101012);
 }
 
@@ -150,8 +150,8 @@ main .card:last-of-type::after{
 }
 
 .btn.ghost:hover{
-  border-color:var(--gold);
-  color:var(--gold-light);
+  border-color:var(--amber);
+  color:var(--amber-light);
 }
 
 /* FOOTER */
@@ -191,7 +191,7 @@ main .card:last-of-type::after{
   font-size:36px;
   font-weight:600;
   letter-spacing:.05em;
-  color:var(--gold-light);
+  color:var(--amber-light);
 }
 
 /* RITUAL PATH */
@@ -223,11 +223,11 @@ main .card:last-of-type::after{
 .path-step .title{
   font-size:18px;
   letter-spacing:.10em;
-  color:var(--gold-light);
+  color:var(--amber-light);
 }
 
 .path-arrow{
-  color:var(--gold);
+  color:var(--amber);
   font-size:22px;
   line-height:1;
   padding:6px 4px;
