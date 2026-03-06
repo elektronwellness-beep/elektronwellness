@@ -10,9 +10,11 @@
   --amber-light:#e6a64a;
   --amber-deep:#a85c12;
 
-  --amber-glow:rgba(208,138,47,.38);
-  --amber-soft:rgba(230,166,74,.10);
+  --amber-glow:rgba(208,138,47,.28);
+  --amber-soft:rgba(230,166,74,.08);
 }
+
+/* RESET */
 
 *{box-sizing:border-box}
 
@@ -21,10 +23,27 @@ html,body{
   padding:0;
 }
 
+/* BACKGROUND ATMOSPHERE */
+
 body{
-  background:var(--bg);
+
+  background:
+  radial-gradient(
+    circle at 50% -10%,
+    rgba(208,138,47,.06),
+    transparent 60%
+  ),
+  radial-gradient(
+    circle at 10% 90%,
+    rgba(208,138,47,.05),
+    transparent 65%
+  ),
+  var(--bg);
+
   color:var(--text);
+
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+
   line-height:1.6;
 }
 
@@ -38,6 +57,8 @@ body{
   border-bottom:1px solid var(--line);
 }
 
+/* LOGO — NO GLOW */
+
 .logo{
   width:220px;
   height:auto;
@@ -46,21 +67,23 @@ body{
 }
 
 /* HEADINGS */
+
 h1,h2,h3{
   margin:0 0 12px;
   color:var(--amber-light);
 }
 
-h1{ letter-spacing:.12em; }
-h2{ letter-spacing:.06em; }
-h3{ letter-spacing:.04em; }
+h1{letter-spacing:.12em}
+h2{letter-spacing:.06em}
+h3{letter-spacing:.04em}
 
 .tagline{
   color:var(--muted);
   margin-top:8px;
 }
 
-/* CARD WITH AMBER WARMTH */
+/* CARD */
+
 .card{
 
   background:
@@ -84,7 +107,8 @@ h3{ letter-spacing:.04em; }
   0 8px 20px rgba(0,0,0,.45);
 }
 
-/* MOLten AMBER DIVIDER */
+/* AMBER DIVIDER */
+
 .card::after{
 
   content:"";
@@ -101,15 +125,14 @@ h3{ letter-spacing:.04em; }
   linear-gradient(
     to right,
     transparent,
-    rgba(208,138,47,.3),
+    rgba(208,138,47,.35),
     var(--amber-light),
-    rgba(208,138,47,.3),
+    rgba(208,138,47,.35),
     transparent
   );
 
   box-shadow:
-  0 0 14px var(--amber-glow),
-  0 0 28px rgba(208,138,47,.12);
+  0 0 12px var(--amber-glow);
 
 }
 
@@ -121,6 +144,8 @@ main .card:last-of-type::after{
   color:var(--muted);
 }
 
+/* BUTTON ROW */
+
 .cta-row{
   display:flex;
   gap:12px;
@@ -129,7 +154,7 @@ main .card:last-of-type::after{
   margin-top:18px;
 }
 
-/* BUTTONS */
+/* BUTTON STYLE */
 
 .btn{
 
@@ -146,7 +171,7 @@ main .card:last-of-type::after{
     #0c0c0e
   );
 
-  border:1px solid rgba(208,138,47,.95);
+  border:1px solid rgba(208,138,47,.9);
 
   color:var(--amber-light);
 
@@ -165,11 +190,10 @@ main .card:last-of-type::after{
   transition:
   transform .15s ease,
   box-shadow .15s ease,
-  background .15s ease,
-  border-color .15s ease;
+  background .15s ease;
 }
 
-/* POLISHED AMBER HIGHLIGHT */
+/* POLISHED RESIN HIGHLIGHT */
 
 .btn::before{
 
@@ -212,7 +236,6 @@ main .card:last-of-type::after{
   inset 0 1px 0 rgba(255,255,255,.11),
   inset 0 -1px 0 rgba(0,0,0,.6),
   0 10px 22px rgba(0,0,0,.6);
-
 }
 
 .btn:active{
