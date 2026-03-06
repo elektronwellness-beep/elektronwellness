@@ -10,11 +10,9 @@
   --amber-light:#e6a64a;
   --amber-deep:#a85c12;
 
-  --amber-glow:rgba(208,138,47,.28);
-  --amber-soft:rgba(230,166,74,.08);
+  --amber-glow:rgba(208,138,47,.20);
+  --amber-soft:rgba(230,166,74,.06);
 }
-
-/* RESET */
 
 *{box-sizing:border-box}
 
@@ -29,13 +27,8 @@ body{
 
   background:
   radial-gradient(
-    circle at 50% -10%,
-    rgba(208,138,47,.06),
-    transparent 60%
-  ),
-  radial-gradient(
     circle at 10% 90%,
-    rgba(208,138,47,.05),
+    rgba(208,138,47,.04),
     transparent 65%
   ),
   var(--bg);
@@ -53,11 +46,40 @@ body{
   padding:56px 18px;
 }
 
+/* HERO SECTION */
+
 .hero{
   border-bottom:1px solid var(--line);
+  position:relative;
 }
 
-/* LOGO — NO GLOW */
+/* SOFT AMBER AURA BEHIND HERO (NOT ON LOGO) */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-120px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:800px;
+  height:300px;
+
+  background:
+  radial-gradient(
+    ellipse at center,
+    rgba(208,138,47,.08),
+    transparent 70%
+  );
+
+  pointer-events:none;
+}
+
+/* LOGO */
 
 .logo{
   width:220px;
@@ -125,14 +147,14 @@ h3{letter-spacing:.04em}
   linear-gradient(
     to right,
     transparent,
-    rgba(208,138,47,.35),
+    rgba(208,138,47,.25),
     var(--amber-light),
-    rgba(208,138,47,.35),
+    rgba(208,138,47,.25),
     transparent
   );
 
   box-shadow:
-  0 0 12px var(--amber-glow);
+  0 0 8px var(--amber-glow);
 
 }
 
@@ -263,7 +285,7 @@ main .card:last-of-type::after{
 .btn.ghost:hover{
   border-color:var(--amber);
   color:var(--amber-light);
-  background:rgba(208,138,47,.06);
+  background:rgba(208,138,47,.05);
 }
 
 /* FOOTER */
