@@ -248,25 +248,23 @@
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
-const SHEET_ID = "1UUFEwmxpUB_T37TIV0XHGMYEAPwkLXhEjaMIJ4fiygs";
-const SHEET_GID = "1406005574";
+const PUBLISHED_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?gid=1406005574&single=true&output=csv";
 
 async function updateFounderCount() {
   const foundersEl = document.getElementById("founders");
   if (!foundersEl) return;
 
-  const url =
-    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${SHEET_GID}`;
-
   try {
-    const response = await fetch(url);
-    const text = await response.text();
+    const response = await fetch(PUBLISHED_CSV_URL, { cache: "no-store" });
+    const csvText = await response.text();
 
-    const jsonText = text.substring(47, text.length - 2);
-    const data = JSON.parse(jsonText);
-    const rows = data.table.rows || [];
+    const lines = csvText
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(line => line.length > 0);
 
-    foundersEl.textContent = rows.length.toString();
+    const submissionCount = Math.max(lines.length - 1, 0);
+    foundersEl.textContent = submissionCount.toString();
   } catch (error) {
     console.error("Founder counter failed to load:", error);
   }
