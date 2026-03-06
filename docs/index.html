@@ -249,14 +249,14 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const SHEET_ID = "1UUFEwmxpUB_T37TIV0XHGMYEAPwkLXhEjaMIJ4fiygs";
-const SHEET_NAME = "Form Responses 1";
+const SHEET_GID = "1406005574";
 
 async function updateFounderCount() {
   const foundersEl = document.getElementById("founders");
   if (!foundersEl) return;
 
   const url =
-    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(SHEET_NAME)}`;
+    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${SHEET_GID}`;
 
   try {
     const response = await fetch(url);
