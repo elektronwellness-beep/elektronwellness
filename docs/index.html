@@ -9,6 +9,53 @@
     content="ELEKTRON Wellness Studio — ritual containers, ritual goods, and a disciplined ecosystem in expansion."
   />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .product-card {
+      border: 1px solid rgba(191, 145, 63, 0.22);
+      border-radius: 18px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(2px);
+    }
+
+    .product-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.72;
+      margin: 0 0 10px 0;
+    }
+
+    .product-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .product-card p {
+      margin: 0 0 14px 0;
+    }
+
+    .product-card .mini-note {
+      font-size: 0.92rem;
+      opacity: 0.8;
+      margin-bottom: 16px;
+    }
+
+    .product-card .cta-row {
+      margin-top: 8px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+    }
+  </style>
 </head>
 
 <body>
@@ -82,24 +129,98 @@
 
   <section class="card">
     <h2>Launch Collection</h2>
-    <p class="whisper">
+    <p class="whisper section-intro">
       Foundational ritual objects, ritual goods, and entry sets for daily return.
+      Explore the first ELEKTRON collection below.
     </p>
 
-    <div class="cta-row" style="justify-content:flex-start; flex-wrap:wrap;">
-      <a class="btn" href="products/threshold-set.html">Threshold Set</a>
-      <a class="btn ghost" href="products/amber-anchor.html">Amber Anchor</a>
-      <a class="btn ghost" href="products/clear-current.html">Clear Current</a>
-      <a class="btn ghost" href="products/ember-intent.html">Ember Intent</a>
-      <a class="btn ghost" href="products/ritual-renewal-cream.html">Ritual Renewal Cream</a>
-      <a class="btn ghost" href="products/solar-bloom.html">Solar Bloom</a>
+    <div class="product-grid">
+
+      <article class="product-card">
+        <p class="product-kicker">Ritual Set</p>
+        <h3>Threshold Set</h3>
+        <p>
+          A compact introduction to the ELEKTRON ritual method.
+        </p>
+        <p class="mini-note">
+          Tea, oil, amber grounding piece, and guided ritual card.
+        </p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn" href="products/threshold-set.html">View Set</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-kicker">Ritual Object</p>
+        <h3>Amber Anchor</h3>
+        <p>
+          Indonesian blue amber used as a grounding ritual stone.
+        </p>
+        <p class="mini-note">
+          Natural fossil resin with blue fluorescence in sunlight.
+        </p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="products/amber-anchor.html">View Product</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-kicker">Ritual Good</p>
+        <h3>Clear Current</h3>
+        <p>
+          An atmospheric clearing mist to prepare the field.
+        </p>
+        <p class="mini-note">
+          Designed to mark the transition into intentional time.
+        </p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="products/clear-current.html">View Product</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-kicker">Ritual Object</p>
+        <h3>Ember Intent</h3>
+        <p>
+          A ritual anointing oil for focus, intention, and beginning.
+        </p>
+        <p class="mini-note">
+          Used to anchor attention before practice.
+        </p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="products/ember-intent.html">View Product</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-kicker">Ritual Good</p>
+        <h3>Ritual Renewal Cream</h3>
+        <p>
+          A grounding body cream for restoration and return.
+        </p>
+        <p class="mini-note">
+          A slower gesture of care built into the ritual cycle.
+        </p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="products/ritual-renewal-cream.html">View Product</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <p class="product-kicker">Ritual Tea</p>
+        <h3>Solar Bloom</h3>
+        <p>
+          Amber-infused hibiscus ritual tea for reflection and pause.
+        </p>
+        <p class="mini-note">
+          A warm entry into stillness, journaling, and return.
+        </p>
+        <div class="cta-row" style="justify-content:flex-start;">
+          <a class="btn ghost" href="products/solar-bloom.html">View Product</a>
+        </div>
+      </article>
+
     </div>
-
-    <p>
-      The first ELEKTRON collection brings together grounding objects, cleansing goods,
-      body ritual care, reflective tea, and an accessible entry set — each designed to
-      support a more deliberate rhythm of practice.
-    </p>
   </section>
 
   <section class="card">
