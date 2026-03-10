@@ -3,81 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ember Intent | ELEKTRON</title>
-  <meta name="description" content="Ember Intent — ritual anointing oil. Available individually and also included in the 30-Day Ritual Reset." />
-  <link rel="stylesheet" href="../style.css" />
+  <title>Ember Intent | ELEKTRON Wellness Studio</title>
+  <meta name="description" content="Ember Intent by ELEKTRON Wellness Studio." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<header class="hero">
-  <div class="wrap" style="padding:0;">
-
-    <div class="cta-row" style="justify-content:flex-start;">
-      <a class="btn ghost" href="index.html">← Back to Products</a>
-      <a class="btn ghost" href="../index.html">Home</a>
-      <a class="btn ghost" href="30-day-ritual.html">30-Day Reset</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" /></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="products/index.html">Shop</a>
+        <a href="ritual-philosophy.html">About</a>
+      </nav>
     </div>
+  </header>
 
-    <img src="../elektron-logo.png" alt="ELEKTRON logo" class="logo" />
-    <h1>Ember Intent</h1>
-    <p class="tagline">Ritual anointing oil. Mark the beginning.</p>
+  <main class="product-page">
+    <div class="container">
+      <div class="product-hero-grid">
+        <div class="product-gallery-stack">
+          <img src="assets/products/mini-ritual-set-1.jpg" alt="Ember Intent by ELEKTRON" class="product-main-image" />
+          <img src="assets/products/mini-ritual-set-2.jpg" alt="Ember Intent detail image" class="product-side-image" />
+        </div>
 
-  </div>
-</header>
+        <div class="product-hero-copy">
+          <p class="section-kicker">Signature Offering</p>
+          <h1>Ember Intent</h1>
+          <p class="product-price">Available in 10ml and 5ml vials</p>
+          <p>
+            Ember Intent is a warm ELEKTRON offering designed to support intention, presence, and grounded daily care.
+          </p>
+          <p>
+            It has a richer, more intimate feel and is offered in two vial sizes.
+          </p>
 
-<main class="wrap">
+          <div class="product-actions">
+            <a class="btn btn-buy" href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02" target="_blank" rel="noopener noreferrer">Buy 10ml</a>
+            <a class="btn btn-buy" href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01" target="_blank" rel="noopener noreferrer">Buy 5ml</a>
+            <a class="btn btn-card" href="products/index.html">Back to Shop</a>
+          </div>
+        </div>
+      </div>
 
-  <section class="card">
-    <h2>Purpose</h2>
-    <p>
-      Ember Intent is the opening mark — the moment you begin with presence.
-      It signals transition from noise to ritual.
-    </p>
-    <p>
-      Used intentionally, it creates a sensory boundary that tells the body and mind the ritual has begun.
-    </p>
-  </section>
+      <div class="product-detail-grid">
+        <div class="product-detail-card">
+          <h2>Overview</h2>
+          <p>
+            Designed to feel warm, intentional, and easy to integrate into everyday use.
+          </p>
+        </div>
 
-  <section class="card">
-    <h2>Included in Reset</h2>
-    <p>
-      Ember Intent is already included as part of the
-      <strong>30-Day Ritual Reset</strong>.
-    </p>
-    <p class="whisper">
-      It is also available as an individual offering for those who want to replenish it separately.
-    </p>
-
-    <div class="cta-row" style="justify-content:flex-start;">
-      <a class="btn ghost" href="30-day-ritual.html">View 30-Day Ritual Reset</a>
+        <div class="product-detail-card">
+          <h2>Available sizes</h2>
+          <p>
+            10ml vial and 5ml vial options are both available directly from this page.
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
+  </main>
 
-  <section class="card">
-    <h2>Choose Your Size</h2>
-    <p class="whisper">Secure checkout powered by Stripe.</p>
-
-    <div class="cta-row" style="justify-content:flex-start;">
-      <a class="btn" href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01" target="_blank" rel="noopener">
-        Buy Ember Intent (5ml)
-      </a>
-
-      <a class="btn" href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02" target="_blank" rel="noopener">
-        Buy Ember Intent (10ml)
-      </a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products/index.html">Shop</a>
+        <a href="ritual-philosophy.html">About</a>
+      </div>
     </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  © <span id="year"></span> ELEKTRON Wellness Studio
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
