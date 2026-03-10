@@ -8,9 +8,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" /></a>
+      <a href="index.html" class="brand">
+        <img src="elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
+      </a>
+
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="products/index.html">Shop</a>
@@ -21,6 +25,7 @@
 
   <main class="product-page">
     <div class="container">
+
       <div class="product-hero-grid">
         <div class="product-gallery-stack">
           <img src="assets/products/mini-ritual-set-1.jpg" alt="Ember Intent by ELEKTRON" class="product-main-image" />
@@ -43,6 +48,8 @@
             <a class="btn btn-buy" href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01" target="_blank" rel="noopener noreferrer">Buy 5ml</a>
             <a class="btn btn-card" href="products/index.html">Back to Shop</a>
           </div>
+
+          <p class="product-note">One product page, two size options.</p>
         </div>
       </div>
 
@@ -51,16 +58,19 @@
           <h2>Overview</h2>
           <p>
             Designed to feel warm, intentional, and easy to integrate into everyday use.
+            Ember Intent fits naturally into the softer, more personal side of the ELEKTRON collection.
           </p>
         </div>
 
         <div class="product-detail-card">
           <h2>Available sizes</h2>
           <p>
-            10ml vial and 5ml vial options are both available directly from this page.
+            10ml vial and 5ml vial options are both available directly from this page,
+            each with its own buy button above.
           </p>
         </div>
       </div>
+
     </div>
   </main>
 
@@ -74,6 +84,10 @@
       </div>
     </div>
   </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
