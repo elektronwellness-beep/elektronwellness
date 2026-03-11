@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ELEKTRON Wellness Studio</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html">
+<img src="elektron-logo.png" class="brand-logo" alt="ELEKTRON logo">
+</a>
+
+<nav class="main-nav">
+
+<a href="index.html">Home</a>
+<a href="ritual-philosophy.html">Philosophy</a>
+<a href="products/30-day-ritual.html">30 Day Ritual</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>ELEKTRON</h1>
+
+<p class="hero-text">
+Ritual containers. Ritual goods.  
+A disciplined ecosystem in expansion.
+</p>
+
+<a class="btn-primary" href="products/30-day-ritual.html">
+Begin the Ritual
+</a>
+
+</div>
+
+</section>
+
+
+<footer class="site-footer">
+
+<div class="container footer-inner">
+
+<p>© 2026 ELEKTRON Wellness Studio</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
