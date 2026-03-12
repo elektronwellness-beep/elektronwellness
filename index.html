@@ -408,6 +408,19 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?output=csv")
+      .then(response => response.text())
+      .then(csv => {
+        const value = csv.trim().split("\n")[0].replace(/"/g, "").trim();
+        const founders = document.getElementById("founders");
+        if (founders && value) {
+          founders.textContent = value;
+        }
+      })
+      .catch(error => {
+        console.error("Counter failed to load:", error);
+      });
   </script>
 
 </body>
