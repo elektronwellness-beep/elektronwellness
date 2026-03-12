@@ -12,21 +12,24 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-link">
+      <a href="index.html" class="brand-link" aria-label="ELEKTRON Wellness Studio home">
         <img src="elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="ritual-philosophy.html" class="active">Philosophy</a>
-        <a href="products/30-day-ritual.html">30-Day Ritual</a>
+        <a href="ritual-philosophy.html" class="active" aria-current="page">Philosophy</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#founding-members">Subscribe</a>
       </nav>
     </div>
   </header>
 
-  <main class="page-section">
+  <main id="main-content" class="page-section">
     <div class="container">
       <div class="page-card">
         <p class="eyebrow">Ritual Philosophy</p>
@@ -62,10 +65,19 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
       <p><a href="index.html">Home</a></p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
 
 </body>
 </html>
