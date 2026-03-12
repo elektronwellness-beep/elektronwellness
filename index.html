@@ -12,14 +12,16 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-link">
+      <a href="index.html" class="brand-link" aria-label="ELEKTRON Wellness Studio home">
         <img src="elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
       </a>
 
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="ritual-philosophy.html">Philosophy</a>
         <a href="#products">Products</a>
         <a href="#founding-members">Subscribe</a>
@@ -27,7 +29,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <section class="hero">
       <div class="container hero-grid">
@@ -379,7 +381,7 @@
           <div class="benefit-card"><h3>Early ritual invitations</h3></div>
         </div>
 
-        <div class="founding-counter">
+        <div class="founding-counter" aria-live="polite">
           <div class="counter-number"><span id="founders">3</span> / 100</div>
           <p class="counter-label">Founding Members</p>
         </div>
@@ -407,33 +409,50 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", function () {
+      const yearEl = document.getElementById("year");
+      const foundersEl = document.getElementById("founders");
 
-    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?gid=121603475&single=true&output=csv")
-      .then(response => response.text())
-      .then(csv => {
-        const cleanCsv = csv.replace(/\r/g, "").trim();
-        const lines = cleanCsv.split("\n");
-        const combined = lines.join(" ");
-        const founders = document.getElementById("founders");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
 
-        let match = null;
+      const counterUrl =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?gid=121603475&single=true&output=csv";
 
-        if (lines.length > 1) {
-          match = lines[1].match(/\d+/);
-        }
+      fetch(counterUrl)
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Network response was not ok.");
+          }
+          return response.text();
+        })
+        .then(function (csv) {
+          const cleanCsv = csv.replace(/\r/g, "").trim();
+          if (!cleanCsv || !foundersEl) return;
 
-        if (!match) {
-          match = combined.match(/\d+/);
-        }
+          const lines = cleanCsv.split("\n").map(function (line) {
+            return line.trim();
+          });
 
-        if (founders && match) {
-          founders.textContent = match[0];
-        }
-      })
-      .catch(error => {
-        console.error("Counter failed to load:", error);
-      });
+          let count = null;
+
+          for (let i = 0; i < lines.length; i++) {
+            const match = lines[i].match(/\d+/);
+            if (match) {
+              count = match[0];
+              break;
+            }
+          }
+
+          if (count !== null) {
+            foundersEl.textContent = count;
+          }
+        })
+        .catch(function (error) {
+          console.error("Counter failed to load:", error);
+        });
+    });
   </script>
 
 </body>
