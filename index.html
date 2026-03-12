@@ -226,100 +226,67 @@
         <div class="product-grid">
           <article class="product-card">
             <h3>30-Day Ritual Reset</h3>
-            <p>
-              A guided 30-day reset experience created to help rebuild rhythm,
-              reflection, consistency, and intentional daily practice.
-            </p>
+            <p>A guided 30-day reset experience created to help rebuild rhythm, reflection, consistency, and intentional daily practice.</p>
             <a class="text-link" href="products/30-day-ritual.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>7-Day Grounding</h3>
-            <p>
-              A shorter guided grounding experience for stabilization,
-              reconnection, and personal reset.
-            </p>
+            <p>A shorter guided grounding experience for stabilization, reconnection, and personal reset.</p>
             <a class="text-link" href="products/7-day-grounding.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Amber Anchor</h3>
-            <p>
-              A symbolic amber piece intended to support grounding,
-              steadiness, warmth, and return to center.
-            </p>
+            <p>A symbolic amber piece intended to support grounding, steadiness, warmth, and return to center.</p>
             <a class="text-link" href="products/amber-anchor.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Clear Current</h3>
-            <p>
-              A ritual support for emotional clearing, release, and restoring
-              movement, lightness, and flow.
-            </p>
+            <p>A ritual support for emotional clearing, release, and restoring movement, lightness, and flow.</p>
             <a class="text-link" href="products/clear-current.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Ember Intent</h3>
-            <p>
-              An amber-infused ritual oil designed to support focus, clarity,
-              intention, and purposeful action.
-            </p>
+            <p>An amber-infused ritual oil designed to support focus, clarity, intention, and purposeful action.</p>
             <a class="text-link" href="products/ember-intent.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Solar Bloom</h3>
-            <p>
-              A product centered on vitality, brightness, confidence,
-              expansion, and creative energy.
-            </p>
+            <p>A product centered on vitality, brightness, confidence, expansion, and creative energy.</p>
             <a class="text-link" href="products/solar-bloom.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Threshold Set</h3>
-            <p>
-              A symbolic set for transition, new beginnings, change,
-              and stepping into a new season of life.
-            </p>
+            <p>A symbolic set for transition, new beginnings, change, and stepping into a new season of life.</p>
             <a class="text-link" href="products/threshold-set.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Ritual Return Set</h3>
-            <p>
-              A bundled set designed to help support consistency,
-              return, and ongoing personal ritual practice.
-            </p>
+            <p>A bundled set designed to help support consistency, return, and ongoing personal ritual practice.</p>
             <a class="text-link" href="products/ritual-return-set.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Ritual Invitation Box</h3>
-            <p>
-              An introductory box created as a welcoming entry point into
-              the ELEKTRON world and ritual system.
-            </p>
+            <p>An introductory box created as a welcoming entry point into the ELEKTRON world and ritual system.</p>
             <a class="text-link" href="products/ritual-invitation-box.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Ritual Renewal Cream</h3>
-            <p>
-              A moisturizing body ritual product designed for restoration,
-              softness, self-care, and embodied support.
-            </p>
+            <p>A moisturizing body ritual product designed for restoration, softness, self-care, and embodied support.</p>
             <a class="text-link" href="products/ritual-renewal-cream.html">View product</a>
           </article>
 
           <article class="product-card">
             <h3>Ritual Restore Scrub</h3>
-            <p>
-              An exfoliating body ritual product designed to support renewal,
-              cleansing, smoothness, and refresh.
-            </p>
+            <p>An exfoliating body ritual product designed to support renewal, cleansing, smoothness, and refresh.</p>
             <a class="text-link" href="products/ritual-restore-scrub.html">View product</a>
           </article>
         </div>
@@ -412,12 +379,13 @@
     fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?gid=121603475&single=true&output=csv")
       .then(response => response.text())
       .then(csv => {
-        const rows = csv.trim().split("\n");
-        const value = rows[1].replace(/"/g, "").trim();
+        const lines = csv.trim().split("\n");
+        const rawValue = lines[1] ? lines[1].replace(/"/g, "").trim() : "";
+        const match = rawValue.match(/\d+/);
         const founders = document.getElementById("founders");
 
-        if (founders && value && !isNaN(Number(value))) {
-          founders.textContent = value;
+        if (founders && match) {
+          founders.textContent = match[0];
         }
       })
       .catch(error => {
