@@ -406,28 +406,24 @@
     </div>
   </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?output=csv")
-  .then(response => response.text())
-  .then(csv => {
+    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?gid=121603475&single=true&output=csv")
+      .then(response => response.text())
+      .then(csv => {
+        const rows = csv.trim().split("\n");
+        const value = rows[1].replace(/"/g, "").trim();
+        const founders = document.getElementById("founders");
 
-    const rows = csv.trim().split("\n");
+        if (founders && value && !isNaN(Number(value))) {
+          founders.textContent = value;
+        }
+      })
+      .catch(error => {
+        console.error("Counter failed to load:", error);
+      });
+  </script>
 
-    // row 2 contains the counter value
-    const value = rows[1].replace(/"/g, "").trim();
-
-    const founders = document.getElementById("founders");
-
-    if (founders && value) {
-      founders.textContent = value;
-    }
-
-  })
-  .catch(error => {
-    console.error("Counter failed to load:", error);
-  });
-</script>
 </body>
 </html>
