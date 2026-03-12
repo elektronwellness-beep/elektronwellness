@@ -86,6 +86,31 @@ a{
   color:inherit;
 }
 
+a:focus-visible,
+button:focus-visible{
+  outline:2px solid var(--amber-soft);
+  outline-offset:3px;
+  border-radius:8px;
+}
+
+.skip-link{
+  position:absolute;
+  left:16px;
+  top:-48px;
+  z-index:1000;
+  background:var(--cream);
+  color:var(--ink);
+  padding:10px 14px;
+  text-decoration:none;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  transition:top .2s ease;
+}
+
+.skip-link:focus{
+  top:12px;
+}
+
 .container{
   width:min(100% - 32px, var(--container));
   margin:0 auto;
@@ -133,6 +158,7 @@ a{
   color:var(--ink);
   font-size:0.95rem;
   letter-spacing:0.02em;
+  transition:color .2s ease;
 }
 
 .main-nav a:hover,
@@ -220,10 +246,11 @@ a{
   border-radius:999px;
   text-decoration:none;
   border:1px solid transparent;
-  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
   cursor:pointer;
   font-family:inherit;
   font-size:0.94rem;
+  text-align:center;
 }
 
 .btn:hover{
@@ -236,10 +263,18 @@ a{
   box-shadow:0 10px 22px rgba(0,0,0,0.18);
 }
 
+.btn-primary:hover{
+  box-shadow:0 14px 26px rgba(0,0,0,0.22);
+}
+
 .btn-secondary{
   background:rgba(255,255,255,0.08);
   color:#fff;
   border-color:rgba(255,255,255,0.22);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.12);
 }
 
 .section{
@@ -334,6 +369,9 @@ a{
   border-radius:var(--radius);
   padding:22px;
   box-shadow:0 10px 24px rgba(0,0,0,0.12);
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
 .product-card h3{
@@ -346,9 +384,14 @@ a{
   margin:0 0 14px;
 }
 
+.product-card .text-link{
+  margin-top:auto;
+}
+
 .text-link{
   color:#a56d1b;
   text-decoration:none;
+  font-weight:600;
 }
 
 .text-link:hover{
@@ -451,6 +494,7 @@ a{
   margin-top:22px;
   color:#a56d1b;
   text-decoration:none;
+  font-weight:600;
 }
 
 .back-link:hover{
@@ -483,5 +527,36 @@ ul{
   .footer-inner{
     justify-content:center;
     text-align:center;
+  }
+}
+
+@media (max-width: 640px){
+  .container{
+    width:min(100% - 24px, var(--container));
+  }
+
+  .section,
+  .page-section{
+    padding:40px 0;
+  }
+
+  .hero-card,
+  .belief-card,
+  .product-card,
+  .page-card{
+    padding:20px;
+  }
+
+  .main-nav{
+    gap:14px;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
   }
 }
