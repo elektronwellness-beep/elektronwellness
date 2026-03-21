@@ -3,517 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ritual Renewal Butter | ELEKTRON Wellness Studio</title>
-  <meta
-    name="description"
-    content="Ritual Renewal Butter by ELEKTRON Wellness Studio. An amber-infused body butter designed to restore, ground, and seal the skin through intentional formulation."
-  />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    :root {
-      --bg: #0b0b0b;
-      --bg-soft: #121212;
-      --gold: #c6a15b;
-      --gold-soft: #a8874c;
-      --text: #eadfca;
-      --muted: #cbb891;
-      --border: rgba(198, 161, 91, 0.32);
-      --shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at top, rgba(198, 161, 91, 0.08), transparent 30%),
-        linear-gradient(180deg, #090909 0%, #0d0d0d 100%);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.65;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .wrap {
-      width: min(1100px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-      background: rgba(10, 10, 10, 0.9);
-      border-bottom: 1px solid rgba(198, 161, 91, 0.14);
-    }
-
-    .site-header .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img {
-      width: 54px;
-      height: 54px;
-      object-fit: contain;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text strong {
-      color: var(--gold);
-      font-size: 1rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .brand-text span {
-      color: var(--muted);
-      font-size: 0.85rem;
-      letter-spacing: 0.06em;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav a {
-      color: var(--muted);
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-      transition: color 0.25s ease;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      color: var(--gold);
-    }
-
-    .hero {
-      padding: 88px 0 54px;
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, rgba(18, 18, 18, 0.95), rgba(10, 10, 10, 0.98));
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 56px 34px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(198, 161, 91, 0.08), transparent 32%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.26em;
-      font-size: 0.82rem;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0;
-      color: var(--text);
-      font-size: clamp(2.1rem, 4.4vw, 4rem);
-      line-height: 1.1;
-      font-weight: 500;
-    }
-
-    .hero-subtitle {
-      width: min(760px, 100%);
-      margin: 20px auto 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .hero-tags {
-      margin-top: 26px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .hero-tags span {
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--gold);
-      font-size: 0.9rem;
-      background: rgba(198, 161, 91, 0.05);
-    }
-
-    .page-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      padding-bottom: 70px;
-    }
-
-    .panel {
-      background: rgba(14, 14, 14, 0.94);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 30px 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .panel h2 {
-      margin: 0 0 16px;
-      color: var(--gold);
-      font-size: 1.35rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-    }
-
-    .product-hook {
-      color: var(--text);
-      font-size: 1.08rem;
-      margin-top: 0;
-      margin-bottom: 22px;
-    }
-
-    .benefits {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 26px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .benefits li {
-      padding: 14px 16px;
-      border: 1px solid rgba(198, 161, 91, 0.18);
-      border-radius: 16px;
-      background: rgba(198, 161, 91, 0.04);
-      color: var(--text);
-    }
-
-    .body-copy p {
-      margin: 0 0 16px;
-      color: var(--muted);
-    }
-
-    .info-block {
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(198, 161, 91, 0.15);
-    }
-
-    .info-block p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .purchase-card {
-      position: sticky;
-      top: 104px;
-    }
-
-    .price-note {
-      margin-top: 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .size-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .buy-btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      width: 100%;
-      padding: 16px 18px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(198, 161, 91, 0.05), rgba(198, 161, 91, 0.02));
-      color: var(--gold);
-      font-size: 1rem;
-      transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
-    }
-
-    .buy-btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(198, 161, 91, 0.55);
-      background: linear-gradient(180deg, rgba(198, 161, 91, 0.11), rgba(198, 161, 91, 0.04));
-    }
-
-    .buy-btn strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .purchase-details {
-      margin-top: 24px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(198, 161, 91, 0.15);
-      display: grid;
-      gap: 12px;
-    }
-
-    .purchase-details p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .related-links {
-      margin-top: 24px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .related-links a {
-      padding: 12px 14px;
-      border: 1px solid rgba(198, 161, 91, 0.14);
-      border-radius: 14px;
-      color: var(--muted);
-      transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease;
-    }
-
-    .related-links a:hover {
-      color: var(--gold);
-      border-color: rgba(198, 161, 91, 0.4);
-      background: rgba(198, 161, 91, 0.05);
-    }
-
-    .site-footer {
-      border-top: 1px solid rgba(198, 161, 91, 0.12);
-      padding: 28px 0 40px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 900px) {
-      .page-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .purchase-card {
-        position: static;
-      }
-
-      .site-header .wrap {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .hero {
-        padding-top: 54px;
-      }
-
-      .hero-card {
-        padding: 42px 22px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .wrap {
-        width: min(100% - 22px, 1100px);
-      }
-
-      .buy-btn {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .brand {
-        align-items: flex-start;
-      }
-
-      .brand img {
-        width: 48px;
-        height: 48px;
-      }
-    }
-  </style>
+  <title>Ritual Renewal Butter | ELEKTRON</title>
+  <meta name="description" content="Ritual Renewal Butter by ELEKTRON Wellness Studio." />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html">
-        <img src="elektron-logo.png" alt="ELEKTRON logo" />
-        <div class="brand-text">
-          <strong>ELEKTRON</strong>
-          <span>Wellness Studio</span>
-        </div>
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link">
+        <img src="../elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
       </a>
-
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="ritual-philosophy.html">Ritual Philosophy</a>
-        <a href="Amber-Ritual-Oil.html">Amber Ritual Oil</a>
-        <a href="ritual-restore-scrub.html">Scrubs</a>
-        <a href="ritual-renewal-cream.html" class="active">Ritual Renewal Butter</a>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="../ritual-philosophy.html">Philosophy</a>
+        <a href="ritual-renewal-butter.html" class="active">Ritual Renewal Butter</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-card">
-          <div class="eyebrow">ELEKTRON Body Ritual</div>
-          <h1>Ritual Renewal Butter</h1>
-          <p class="hero-subtitle">
-            A rich amber-infused body butter designed to restore, ground, and seal the skin through intentional formulation.
-          </p>
-
-          <div class="hero-tags">
-            <span>Restore</span>
-            <span>Balance</span>
-            <span>Seal</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap page-grid">
-      <article class="panel">
-        <p class="product-hook">
-          Ritual Renewal Butter is a concentrated blend of plant-based oils and butters crafted to restore the skin while supporting a grounded, balanced state.
+  <main class="page-section">
+    <div class="container">
+      <div class="page-card">
+        <p class="section-kicker">Body Ritual</p>
+        <h1 class="page-title">Ritual Renewal Butter</h1>
+        <p>
+          A rich amber-infused body ritual product designed for restoration, softness, grounding, and embodied support.
+        </p>
+        <p>
+          Ritual Renewal Butter belongs to practices of care, embodiment, and renewal. It is created to support daily ritual through texture, scent, nourishment, and intentional touch.
         </p>
 
-        <h2>Benefits</h2>
-        <ul class="benefits">
-          <li>Deeply hydrates and seals moisture</li>
-          <li>Supports the skin barrier with rich botanical nourishment</li>
-          <li>Leaves skin soft and conditioned without a greasy finish</li>
-          <li>Offers a subtle grounding ritual through amber infusion and essential oils</li>
+        <h2>Ingredients</h2>
+        <p>
+          Coconut oil, cocoa butter, amber-infused avocado oil, arrowroot powder, vitamin E, frankincense, copaiba, cassia, lavender, peppermint, cedarwood, black pepper, and cypress.
+        </p>
+
+        <h2>Available Sizes</h2>
+        <ul>
+          <li>10ml</li>
+          <li>20ml</li>
+          <li>30ml</li>
+          <li>40ml</li>
         </ul>
 
-        <div class="body-copy">
-          <h2>Description</h2>
-          <p>
-            Ritual Renewal Butter was created as a body ritual rather than a basic moisturizer. Built around coconut oil, cocoa butter, amber-infused avocado oil, and arrowroot, it melts into the skin while maintaining a smooth, velvety finish.
-          </p>
-          <p>
-            The formula is designed to support restoration after bathing, evening ritual, or any moment that calls for grounding and intentional care. It brings together softness, warmth, and presence in one concentrated preparation.
-          </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08" target="_blank" rel="noopener">Buy 10ml</a>
+          <a class="btn btn-secondary" href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b" target="_blank" rel="noopener">Buy 20ml</a>
+          <a class="btn btn-secondary" href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a" target="_blank" rel="noopener">Buy 30ml</a>
+          <a class="btn btn-secondary" href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09" target="_blank" rel="noopener">Buy 40ml</a>
         </div>
 
-        <div class="info-block">
-          <h2>Ingredients</h2>
-          <p>
-            Coconut oil, cocoa butter, amber-infused avocado oil, arrowroot powder, vitamin E, frankincense, copaiba, cassia, lavender, peppermint, cedarwood, black pepper, and cypress.
-          </p>
-        </div>
+        <h2>FAQ</h2>
 
-        <div class="info-block">
-          <h2>Ritual</h2>
-          <p>
-            Warm a small amount between your hands and press into the skin after bathing or as part of your daily ritual. Focus on areas needing restoration, softness, and grounding.
-          </p>
-        </div>
-
-        <div class="info-block">
-          <h2>Care</h2>
-          <p>
-            For external use only. Store in a cool, dry place away from direct heat and sunlight.
-          </p>
-        </div>
-      </article>
-
-      <aside class="panel purchase-card">
-        <h2>Choose Your Size</h2>
-        <p class="price-note">
-          Select the Ritual Renewal Butter size that fits your ritual. Each option links directly to secure Stripe checkout.
+        <h3>What is Ritual Renewal Butter made for?</h3>
+        <p>
+          It is designed to support moisture, softness, and restoration while also serving as part of a grounding body ritual.
         </p>
 
-        <div class="size-list">
-          <a class="buy-btn" href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08" target="_blank" rel="noopener noreferrer">
-            <strong>10ml</strong>
-            <span>$8 USD</span>
-          </a>
+        <h3>How do I use it?</h3>
+        <p>
+          Warm a small amount between your hands and press into the skin after bathing or as part of your daily ritual.
+        </p>
 
-          <a class="buy-btn" href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b" target="_blank" rel="noopener noreferrer">
-            <strong>20ml</strong>
-            <span>$14 USD</span>
-          </a>
+        <h3>Will it feel greasy?</h3>
+        <p>
+          Arrowroot powder is included to help reduce a greasy finish and create a smoother, more balanced feel on the skin.
+        </p>
 
-          <a class="buy-btn" href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a" target="_blank" rel="noopener noreferrer">
-            <strong>30ml</strong>
-            <span>$20 USD</span>
-          </a>
+        <h3>How should I store it?</h3>
+        <p>
+          Store in a cool, dry place away from direct heat and sunlight.
+        </p>
 
-          <a class="buy-btn" href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09" target="_blank" rel="noopener noreferrer">
-            <strong>40ml</strong>
-            <span>$26 USD</span>
-          </a>
-        </div>
+        <h3>Is it for external use only?</h3>
+        <p>
+          Yes. Ritual Renewal Butter is for external use only.
+        </p>
 
-        <div class="purchase-details">
-          <p>Amber-infused formulation</p>
-          <p>Small-batch ritual care</p>
-          <p>Secure checkout through Stripe</p>
-        </div>
-
-        <div class="related-links">
-          <a href="Amber-Ritual-Oil.html">View Amber Ritual Oil</a>
-          <a href="ritual-restore-scrub.html">View Ritual Scrubs</a>
-          <a href="index.html">Return to Home</a>
-        </div>
-      </aside>
-    </section>
+        <a class="back-link" href="../index.html">← Return home</a>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      ELEKTRON Wellness Studio
+    <div class="container footer-inner">
+      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p><a href="../ritual-philosophy.html">Ritual Philosophy</a></p>
     </div>
   </footer>
 </body>
