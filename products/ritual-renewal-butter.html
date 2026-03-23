@@ -11,58 +11,29 @@
   <link rel="stylesheet" href="../style.css" />
 
   <style>
-    .size-selection-wrap{
-      margin: 28px 0 12px;
+    .butter-size-wrap{
+      margin: 26px 0 8px;
     }
 
-    .size-selection-intro{
-      margin: 0 0 18px;
+    .butter-size-intro{
+      margin: 0 0 14px;
     }
 
-    .size-selection-grid{
+    .butter-size-grid{
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 16px;
+      gap: 12px;
+      margin-top: 10px;
     }
 
-    .size-option-card{
-      background: #fff;
-      border: 1px solid rgba(0,0,0,0.10);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-    }
-
-    .size-option-card h3{
-      margin: 0 0 6px;
-      color: var(--ink);
-      font-size: 1.12rem;
-    }
-
-    .size-option-card p{
-      margin: 0 0 8px;
-      color: var(--ink);
-    }
-
-    .size-price{
-      font-weight: 700;
-      color: #a56d1b;
-      margin-bottom: 12px;
-    }
-
-    .size-note{
+    .butter-size-grid a{
+      min-height: auto;
+      padding: 10px 14px;
       font-size: 0.95rem;
-      opacity: 0.88;
     }
 
-    .size-option-card .btn{
-      width: 100%;
-      margin-top: 8px;
-    }
-
-    @media (max-width: 700px){
-      .size-selection-grid{
+    @media (max-width: 640px){
+      .butter-size-grid{
         grid-template-columns: 1fr;
       }
     }
@@ -101,68 +72,28 @@
           Coconut oil, cocoa butter, amber-infused avocado oil, arrowroot powder, vitamin E, frankincense, copaiba, cassia, lavender, peppermint, cedarwood, black pepper, and cypress.
         </p>
 
-        <div class="size-selection-wrap">
+        <div class="butter-size-wrap">
           <h2>Select Your Size</h2>
-          <p class="size-selection-intro">
-            Choose the Ritual Renewal Butter size you want before continuing to secure checkout.
+          <p class="butter-size-intro">
+            Choose your size below before continuing to checkout.
           </p>
 
-          <div class="size-selection-grid">
-            <div class="size-option-card">
-              <h3>10ml</h3>
-              <p class="size-note">Trial size</p>
-              <p class="size-price">$8</p>
-              <a
-                class="btn btn-primary"
-                href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08"
-                target="_blank"
-                rel="noopener"
-              >
-                Choose 10ml
-              </a>
-            </div>
+          <div class="butter-size-grid">
+            <a class="btn btn-primary" href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08" target="_blank" rel="noopener">
+              10ml — $8
+            </a>
 
-            <div class="size-option-card">
-              <h3>20ml</h3>
-              <p class="size-note">Starter size</p>
-              <p class="size-price">$14</p>
-              <a
-                class="btn btn-primary"
-                href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b"
-                target="_blank"
-                rel="noopener"
-              >
-                Choose 20ml
-              </a>
-            </div>
+            <a class="btn btn-secondary" href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b" target="_blank" rel="noopener">
+              20ml — $14
+            </a>
 
-            <div class="size-option-card">
-              <h3>30ml</h3>
-              <p class="size-note">Core size</p>
-              <p class="size-price">$20</p>
-              <a
-                class="btn btn-primary"
-                href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a"
-                target="_blank"
-                rel="noopener"
-              >
-                Choose 30ml
-              </a>
-            </div>
+            <a class="btn btn-secondary" href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a" target="_blank" rel="noopener">
+              30ml — $20
+            </a>
 
-            <div class="size-option-card">
-              <h3>40ml</h3>
-              <p class="size-note">Best value</p>
-              <p class="size-price">$26</p>
-              <a
-                class="btn btn-primary"
-                href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09"
-                target="_blank"
-                rel="noopener"
-              >
-                Choose 40ml
-              </a>
-            </div>
+            <a class="btn btn-secondary" href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09" target="_blank" rel="noopener">
+              40ml — $26
+            </a>
           </div>
         </div>
 
