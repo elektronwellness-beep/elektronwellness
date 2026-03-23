@@ -4,61 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amber Anchor | ELEKTRON</title>
-  <meta name="description" content="Amber Anchor by ELEKTRON Wellness Studio." />
+  <meta
+    name="description"
+    content="Amber Anchor by ELEKTRON Wellness Studio. A symbolic amber piece created to support grounding, stability, and intentional return."
+  />
   <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    .anchor-buy-wrap{
+      margin: 26px 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .anchor-buy-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 0.96rem;
+      text-align: center;
+      background: linear-gradient(180deg, #e0ac56 0%, #ba7627 100%);
+      color: #ffffff;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+      transition: transform .2s ease;
+    }
+
+    .anchor-buy-button:hover{
+      transform: translateY(-1px);
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand-link">
-        <img src="../elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
+        <img src="../elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
       </a>
-
       <nav class="main-nav">
         <a href="../index.html">Home</a>
         <a href="../ritual-philosophy.html">Philosophy</a>
-        <a href="amber-anchor.html" class="active">Amber Anchor</a>
+        <a href="../index.html#products">Products</a>
       </nav>
     </div>
   </header>
 
   <main class="page-section">
     <div class="container">
-      <div class="page-card light">
-        <p class="section-kicker">Ritual Object</p>
-        <h1 class="page-title dark-text">Amber Anchor</h1>
+      <div class="page-card">
+
+        <p class="section-kicker">Symbolic Object</p>
+        <h1 class="page-title">Amber Anchor</h1>
+
         <p>
-          A stabilizing offering created to support warmth, grounding,
-          devotion, and sacred return.
-        </p>
-        <p>
-          Amber Anchor is meant to function as a point of contact within the
-          larger ELEKTRON ritual ecosystem.
+          The Amber Anchor is a symbolic piece created to support grounding, stability, and intentional return.
         </p>
 
-        <div class="hero-actions">
+        <p>
+          Inspired by the deeper meaning of the anchor, this piece represents steadiness, connection, and the ability to remain rooted even through movement and change.
+        </p>
+
+        <p>
+          Anchors have long symbolized strength, stability, and hope — a reminder to stay steady through life’s shifting tides and to return to center when needed. :contentReference[oaicite:0]{index=0}
+        </p>
+
+        <div class="anchor-buy-wrap">
+          <h2>Purchase</h2>
+
           <a
-            class="btn btn-primary"
+            class="anchor-buy-button"
             href="https://buy.stripe.com/3cI14m2GR3iE4dj4k40ZW00"
             target="_blank"
             rel="noopener"
           >
-            Purchase Amber Anchor
+            Buy Amber Anchor
           </a>
         </div>
 
+        <h2>Ritual Use</h2>
+        <p>
+          Keep the Amber Anchor with you or place it in your ritual space as a physical reminder to return to yourself, remain steady, and stay grounded in your intention.
+        </p>
+
+        <h2>FAQ</h2>
+
+        <h3>What is the purpose of the Amber Anchor?</h3>
+        <p>
+          It serves as a symbolic grounding object designed to support emotional steadiness, focus, and intentional return.
+        </p>
+
+        <h3>How do I use it?</h3>
+        <p>
+          Keep it nearby, hold it during moments of reflection, or incorporate it into your ritual practice as a grounding point.
+        </p>
+
+        <h3>Is this a wearable piece or a ritual object?</h3>
+        <p>
+          It is primarily a symbolic ritual object, though it may be carried or placed wherever grounding is needed.
+        </p>
+
+        <h3>What does the anchor symbolize?</h3>
+        <p>
+          The anchor represents stability, strength, and the ability to remain grounded even in uncertain or changing conditions.
+        </p>
+
         <a class="back-link" href="../index.html">← Return home</a>
+
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
       <p><a href="../ritual-philosophy.html">Ritual Philosophy</a></p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
