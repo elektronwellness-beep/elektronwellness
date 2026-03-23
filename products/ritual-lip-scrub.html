@@ -4,19 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ritual Lip Scrub | ELEKTRON</title>
-  <meta name="description" content="Ritual Lip Scrub by ELEKTRON Wellness Studio." />
+  <meta
+    name="description"
+    content="Ritual Lip Scrub by ELEKTRON Wellness Studio. A gentle sugar-based exfoliant designed to smooth, soften, and restore the lips through intentional care."
+  />
   <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    .lip-buy-wrap{
+      margin: 26px 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .lip-buy-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 0.96rem;
+      text-align: center;
+      background: linear-gradient(180deg, #e0ac56 0%, #ba7627 100%);
+      color: #ffffff;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+      transition: transform .2s ease;
+    }
+
+    .lip-buy-button:hover{
+      transform: translateY(-1px);
+    }
+  </style>
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand-link">
-        <img src="../elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
+        <img src="../elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
       </a>
       <nav class="main-nav">
         <a href="../index.html">Home</a>
         <a href="../ritual-philosophy.html">Philosophy</a>
-        <a href="ritual-lip-scrub.html" class="active">Ritual Lip Scrub</a>
+        <a href="../index.html#products">Products</a>
       </nav>
     </div>
   </header>
@@ -24,13 +61,16 @@
   <main class="page-section">
     <div class="container">
       <div class="page-card">
+
         <p class="section-kicker">Lip Ritual</p>
         <h1 class="page-title">Ritual Lip Scrub</h1>
+
         <p>
           A gentle sugar-based exfoliant designed to smooth, soften, and restore the lips through intentional care.
         </p>
+
         <p>
-          Ritual Lip Scrub brings the ELEKTRON ritual experience into a simple moment of care with a formula created for softness, polish, and renewal.
+          Ritual Lip Scrub brings the ELEKTRON ritual experience into a simple moment of care. It is created to polish, soften, and prepare the lips while maintaining a clean, minimal formula.
         </p>
 
         <h2>Ingredients</h2>
@@ -38,25 +78,39 @@
           White sugar, coconut oil, grapefruit essential oil, amber powder.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://buy.stripe.com/3cI28q81b7yU39f8Ak0ZW0c" target="_blank" rel="noopener">Buy Ritual Lip Scrub</a>
+        <div class="lip-buy-wrap">
+          <h2>10ml Jar</h2>
+
+          <a
+            class="lip-buy-button"
+            href="https://buy.stripe.com/3cI28q81b7yU39f8Ak0ZW0c"
+            target="_blank"
+            rel="noopener"
+          >
+            Buy Ritual Lip Scrub — $ (10ml)
+          </a>
         </div>
+
+        <h2>Ritual Use</h2>
+        <p>
+          Apply a small amount to the lips and gently massage in circular motions. Wipe or rinse away to reveal smoother, softer lips.
+        </p>
 
         <h2>FAQ</h2>
 
         <h3>What is Ritual Lip Scrub made for?</h3>
         <p>
-          It is designed to gently exfoliate dry lips, soften rough texture, and prepare the lips for hydration.
-        </p>
-
-        <h3>How do I use it?</h3>
-        <p>
-          Massage a small amount onto the lips using light circular motions, then rinse or wipe away.
+          It is designed to gently exfoliate dry lips, smooth texture, and prepare the lips for hydration.
         </p>
 
         <h3>How often should I use it?</h3>
         <p>
-          Use as needed for gentle exfoliation. Avoid over-exfoliating sensitive lips.
+          Use as needed. Avoid over-exfoliating if your lips are sensitive.
+        </p>
+
+        <h3>Is it safe if a small amount is ingested?</h3>
+        <p>
+          The ingredients are simple, but this product is intended for external use only.
         </p>
 
         <h3>How should I store it?</h3>
@@ -70,15 +124,21 @@
         </p>
 
         <a class="back-link" href="../index.html">← Return home</a>
+
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
       <p><a href="../ritual-philosophy.html">Ritual Philosophy</a></p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
