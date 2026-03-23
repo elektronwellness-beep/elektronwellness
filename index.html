@@ -9,6 +9,75 @@
     content="ELEKTRON Wellness Studio is a ritual-based creative wellness studio rooted in the symbolism of amber, offering guided practices, amber-infused products, ritual objects, and symbolic artwork for grounding, restoration, reflection, and intentional living."
   />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .featured-flow{
+      margin-top: 12px;
+    }
+
+    .featured-flow-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:20px;
+      margin-top:22px;
+    }
+
+    .featured-flow-card{
+      background:#fff;
+      color:var(--ink);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .featured-flow-card h3{
+      margin:0 0 10px;
+      color:var(--ink);
+      font-size:1.14rem;
+    }
+
+    .featured-flow-card p{
+      margin:0 0 14px;
+    }
+
+    .featured-badge{
+      display:inline-block;
+      margin-bottom:10px;
+      font-size:0.78rem;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      color:#a56d1b;
+      font-weight:600;
+    }
+
+    .featured-flow-card .btn{
+      margin-top:auto;
+      width:auto;
+      align-self:flex-start;
+    }
+
+    .quick-path{
+      margin-top:14px;
+      color:var(--text-soft);
+      font-size:0.98rem;
+      text-align:center;
+    }
+
+    .quick-path strong{
+      color:var(--ink);
+    }
+
+    @media (max-width: 640px){
+      .featured-flow-card .btn{
+        width:100%;
+        align-self:stretch;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -18,6 +87,7 @@
       </a>
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
+        <a href="#start-here">Start Here</a>
         <a href="ritual-philosophy.html">Philosophy</a>
         <a href="#products">Products</a>
         <a href="#founding-members">Subscribe</a>
@@ -36,7 +106,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-secondary" href="ritual-philosophy.html">Read the Philosophy</a>
-            <a class="btn btn-primary" href="#products">Explore Products</a>
+            <a class="btn btn-primary" href="#start-here">Start Here</a>
           </div>
         </div>
 
@@ -46,6 +116,48 @@
           <p>
             The word <strong>Elektron</strong> comes from the ancient Greek word for amber. Amber has long been associated with warmth, preservation, beauty, energy, and protection. That symbolism is the heart of the studio.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="start-here" class="section section-light featured-flow">
+      <div class="container">
+        <div class="section-head center">
+          <p class="section-kicker">Start Here</p>
+          <h2 class="section-heading dark-text">The clearest way into ELEKTRON.</h2>
+          <p class="quick-path">
+            New here? Begin with the path that fits you best:
+            <strong>deep reset</strong>, <strong>short grounding</strong>, or <strong>ritual entry</strong>.
+          </p>
+        </div>
+
+        <div class="featured-flow-grid">
+          <article class="featured-flow-card">
+            <span class="featured-badge">Best Place to Begin</span>
+            <h3>30-Day Ritual Reset</h3>
+            <p>
+              A structured 30-day guided ritual experience created to rebuild rhythm, discipline, and intentional daily practice.
+            </p>
+            <a class="btn btn-primary" href="products/30-day-ritual.html">Start the Reset</a>
+          </article>
+
+          <article class="featured-flow-card">
+            <span class="featured-badge">Shorter Entry Point</span>
+            <h3>7-Day Grounding</h3>
+            <p>
+              A shorter guided grounding experience created for stabilization, reconnection, and intentional return.
+            </p>
+            <a class="btn btn-primary" href="products/7-day-grounding.html">Begin Grounding</a>
+          </article>
+
+          <article class="featured-flow-card">
+            <span class="featured-badge">Physical Entry Point</span>
+            <h3>Ritual Invitation Box</h3>
+            <p>
+              An entry point into the ELEKTRON world, created to introduce ritual, grounding, and intentional practice.
+            </p>
+            <a class="btn btn-primary" href="products/ritual-invitation-box.html">Explore the Box</a>
+          </article>
         </div>
       </div>
     </section>
@@ -237,16 +349,16 @@
     <section class="section section-light">
       <div class="container two-col">
         <div>
-          <p class="section-kicker">Start Here</p>
-          <h2 class="section-heading dark-text">If you are new to ELEKTRON.</h2>
+          <p class="section-kicker">Still Not Sure?</p>
+          <h2 class="section-heading dark-text">Choose your entry point.</h2>
         </div>
         <div class="body-copy">
-          <p>The best first step is the <strong>30-Day Ritual Reset</strong>, which serves as the foundational guided experience of the studio.</p>
-          <p>If you are exploring symbolic objects or amber-infused products, the individual product pages explain what each item is, what it supports, and how it fits into the larger ELEKTRON practice.</p>
-          <p>You can also open the reset journal to get a feel for the structure and spirit of the work.</p>
+          <p>If you want the full structured experience, begin with the <strong>30-Day Ritual Reset</strong>.</p>
+          <p>If you need something shorter and more immediate, begin with <strong>7-Day Grounding</strong>.</p>
+          <p>If you want a physical entry point into the ELEKTRON world, begin with the <strong>Ritual Invitation Box</strong>.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="30-Day-Ritual-Reset-Journal.pdf" target="_blank" rel="noopener">Open Reset Journal</a>
-            <a class="btn btn-secondary" href="#products">Explore Products</a>
+            <a class="btn btn-primary" href="products/30-day-ritual.html">Start the Reset</a>
+            <a class="btn btn-secondary" href="products/7-day-grounding.html">Try 7-Day Grounding</a>
           </div>
         </div>
       </div>
