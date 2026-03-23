@@ -3,70 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>30-Day Ritual | ELEKTRON</title>
-  <meta name="description" content="30-Day Ritual by ELEKTRON Wellness Studio." />
+  <title>30-Day Ritual Reset | ELEKTRON</title>
+  <meta
+    name="description"
+    content="30-Day Ritual Reset by ELEKTRON Wellness Studio. A structured guided experience created to rebuild rhythm, discipline, and intentional daily practice."
+  />
   <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    .product-buy-wrap{
+      margin: 26px 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .product-buy-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 0.96rem;
+      text-align: center;
+      background: linear-gradient(180deg, #e0ac56 0%, #ba7627 100%);
+      color: #ffffff;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+      transition: transform .2s ease;
+    }
+
+    .product-buy-button:hover{
+      transform: translateY(-1px);
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand-link">
-        <img src="../elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
+        <img src="../elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
       </a>
-
       <nav class="main-nav">
         <a href="../index.html">Home</a>
         <a href="../ritual-philosophy.html">Philosophy</a>
-        <a href="30-day-ritual.html" class="active">30-Day Ritual</a>
+        <a href="../index.html#products">Products</a>
       </nav>
     </div>
   </header>
 
   <main class="page-section">
     <div class="container">
-      <div class="page-card light">
-        <p class="section-kicker">Foundational Container</p>
-        <h1 class="page-title dark-text">30-Day Ritual</h1>
+      <div class="page-card">
+
+        <p class="section-kicker">Guided Practice</p>
+        <h1 class="page-title">30-Day Ritual Reset</h1>
+
         <p>
-          The core ELEKTRON offering. A thirty-day ritual container designed to
-          support reset, structure, reflection, and disciplined return.
-        </p>
-        <p>
-          This offering is for those who need a clear beginning point and a
-          grounded framework for practice.
+          The 30-Day Ritual Reset is a structured guided experience created to rebuild rhythm, discipline, and intentional daily practice.
         </p>
 
-        <div class="hero-actions">
+        <p>
+          This is the foundational ELEKTRON experience. It is designed to help you return to yourself through consistent daily action, reflection, and ritual.
+        </p>
+
+        <h2>What It Supports</h2>
+        <p>
+          Consistency, grounding, emotional clarity, discipline, reflection, and long-term personal transformation.
+        </p>
+
+        <div class="product-buy-wrap">
+          <h2>Purchase</h2>
+
           <a
-            class="btn btn-primary"
+            class="product-buy-button"
             href="https://buy.stripe.com/3cI00idlvf1m6lraIs0ZW05"
             target="_blank"
             rel="noopener"
           >
-            Purchase 30-Day Ritual
-          </a>
-          <a
-            class="btn btn-secondary"
-            href="../30-Day-Ritual-Reset-Journal.pdf"
-            target="_blank"
-            rel="noopener"
-          >
-            Open Reset Journal
+            Buy 30-Day Ritual Reset
           </a>
         </div>
 
+        <h2>FAQ</h2>
+
+        <h3>What is the 30-Day Ritual Reset?</h3>
+        <p>
+          It is a guided 30-day structured experience designed to help you rebuild rhythm, focus, and intentional daily practice.
+        </p>
+
+        <h3>Who is it for?</h3>
+        <p>
+          It is for anyone who wants a deeper reset, a return to discipline, or a structured path toward personal growth and consistency.
+        </p>
+
+        <h3>How is it different from the 7-Day Grounding?</h3>
+        <p>
+          The 30-Day Ritual Reset is a longer, more immersive experience focused on building lasting habits and deeper transformation, while the 7-Day Grounding is a shorter reset focused on immediate stabilization.
+        </p>
+
+        <h3>How should I use it?</h3>
+        <p>
+          Follow the structure day by day. Each day builds on the previous, creating a steady progression into a more grounded and intentional rhythm.
+        </p>
+
         <a class="back-link" href="../index.html">← Return home</a>
+
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
       <p><a href="../ritual-philosophy.html">Ritual Philosophy</a></p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
