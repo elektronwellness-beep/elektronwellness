@@ -4,58 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amber Ritual Oil | ELEKTRON</title>
-  <meta name="description" content="Amber Ritual Oil by ELEKTRON Wellness Studio." />
+  <meta
+    name="description"
+    content="Amber Ritual Oil by ELEKTRON Wellness Studio. A pure amber-infused body oil created to nourish, ground, and support intentional ritual."
+  />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand-link">
-        <img src="../elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
+        <img src="../elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
       </a>
-
       <nav class="main-nav">
         <a href="../index.html">Home</a>
         <a href="../ritual-philosophy.html">Philosophy</a>
-        <a href="Amber-Ritual-Oil.html" class="active">Amber Ritual Oil</a>
+        <a href="../index.html#products">Products</a>
       </nav>
     </div>
   </header>
 
   <main class="page-section">
     <div class="container">
-      <div class="page-card light">
-        <p class="section-kicker">Intentional Practice</p>
-        <h1 class="page-title dark-text">Amber Ritual Oil</h1>
+      <div class="page-card">
+        <p class="section-kicker">Amber Ritual</p>
+        <h1 class="page-title">Amber Ritual Oil</h1>
+
         <p>
-          A ritual offering centered on focus, devotion, and carrying sacred
-          intention into action.
-        </p>
-        <p>
-          Amber Ritual Oil supports those building consistency through deliberate,
-          meaningful practice.
+          Amber Ritual Oil is a pure amber-infused body oil created to support nourishment, grounding, and intentional ritual through simple, elemental care.
         </p>
 
-        <div class="hero-actions">
-          <a
-            class="btn btn-primary"
-            href="https://buy.stripe.com/bJe6oG3KV06s1174k40ZW02"
-            target="_blank"
-            rel="noopener"
-          >
-            Purchase Amber Ritual Oil 10ml
-          </a>
+        <p>
+          Each bottle is made with amber-infused avocado oil and includes a small piece of amber inside, creating both a physical and symbolic connection to the ritual itself. The oil is meant to be more than a body product. It is a daily object of return, warmth, and embodied presence.
+        </p>
 
-          <a
-            class="btn btn-secondary"
-            href="https://buy.stripe.com/7sY6oG81b06s9xD7wg0ZW01"
-            target="_blank"
-            rel="noopener"
-          >
-            Purchase Amber Ritual Oil 5ml
-          </a>
-        </div>
+        <h2>Ingredients</h2>
+        <p>
+          Amber-infused avocado oil, with a small piece of amber in each bottle.
+        </p>
+
+        <h2>Ritual Use</h2>
+        <p>
+          Warm a small amount between your hands and press into the skin as part of your daily ritual. Use after bathing, before rest, or anytime you want to return to a more grounded and intentional state.
+        </p>
+
+        <h2>FAQ</h2>
+
+        <h3>What is Amber Ritual Oil made for?</h3>
+        <p>
+          It is made to nourish the skin while also serving as a grounding ritual product centered on amber, touch, and intentional care.
+        </p>
+
+        <h3>What makes this oil different?</h3>
+        <p>
+          The oil is infused with amber and each bottle contains a small piece of amber, making it both a body oil and a symbolic ritual object.
+        </p>
+
+        <h3>How do I use it?</h3>
+        <p>
+          Apply a small amount to the skin and press in with intention. It can be used after bathing, during meditation, before rest, or anytime you want a grounding point in your day.
+        </p>
+
+        <h3>Is this a heavily scented oil?</h3>
+        <p>
+          No. This product is centered on the amber-infused avocado oil itself rather than a strong essential oil blend.
+        </p>
+
+        <h3>How should I store it?</h3>
+        <p>
+          Store in a cool, dry place away from direct heat and sunlight.
+        </p>
+
+        <h3>Is it for external use only?</h3>
+        <p>
+          Yes. Amber Ritual Oil is for external use only.
+        </p>
 
         <a class="back-link" href="../index.html">← Return home</a>
       </div>
@@ -64,10 +87,13 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
       <p><a href="../ritual-philosophy.html">Ritual Philosophy</a></p>
     </div>
   </footer>
 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
