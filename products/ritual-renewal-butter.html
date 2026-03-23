@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,34 +12,63 @@
 
   <style>
     .butter-size-wrap{
-      margin: 26px 0 8px;
+      margin: 26px 0 10px;
     }
 
     .butter-size-intro{
-      margin: 0 0 14px;
+      margin-bottom: 14px;
     }
 
-    .butter-size-grid{
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .butter-size-list{
+      display: flex;
+      flex-direction: column;
       gap: 12px;
-      margin-top: 10px;
+      margin-top: 14px;
+      align-items: center;
     }
 
-    .butter-size-grid a{
-      min-height: auto;
-      padding: 10px 14px;
-      font-size: 0.95rem;
+    .butter-size-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 0.96rem;
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+    }
+
+    .butter-size-button:hover{
+      transform: translateY(-1px);
+    }
+
+    .butter-size-button.primary{
+      background: linear-gradient(180deg, #e0ac56 0%, #ba7627 100%);
+      color: #ffffff;
+      border: 1px solid transparent;
+    }
+
+    .butter-size-button.secondary{
+      background: linear-gradient(180deg, #e8b968 0%, #c98933 100%);
+      color: #ffffff;
+      border: 1px solid transparent;
     }
 
     @media (max-width: 640px){
-      .butter-size-grid{
-        grid-template-columns: 1fr;
+      .butter-size-button{
+        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand-link">
@@ -57,6 +85,7 @@
   <main class="page-section">
     <div class="container">
       <div class="page-card">
+
         <p class="section-kicker">Body Ritual</p>
         <h1 class="page-title">Ritual Renewal Butter</h1>
 
@@ -79,20 +108,40 @@
             Choose your size below before continuing to checkout.
           </p>
 
-          <div class="butter-size-grid">
-            <a class="btn btn-primary" href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08" target="_blank" rel="noopener">
+          <div class="butter-size-list">
+            <a
+              class="butter-size-button primary"
+              href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08"
+              target="_blank"
+              rel="noopener"
+            >
               10ml — $8
             </a>
 
-            <a class="btn btn-secondary" href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b" target="_blank" rel="noopener">
+            <a
+              class="butter-size-button secondary"
+              href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b"
+              target="_blank"
+              rel="noopener"
+            >
               20ml — $14
             </a>
 
-            <a class="btn btn-secondary" href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a" target="_blank" rel="noopener">
+            <a
+              class="butter-size-button secondary"
+              href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a"
+              target="_blank"
+              rel="noopener"
+            >
               30ml — $20
             </a>
 
-            <a class="btn btn-secondary" href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09" target="_blank" rel="noopener">
+            <a
+              class="butter-size-button secondary"
+              href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09"
+              target="_blank"
+              rel="noopener"
+            >
               40ml — $26
             </a>
           </div>
@@ -126,6 +175,7 @@
         </p>
 
         <a class="back-link" href="../index.html">← Return home</a>
+
       </div>
     </div>
   </main>
@@ -140,5 +190,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
