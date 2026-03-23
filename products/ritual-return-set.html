@@ -4,61 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ritual Return Set | ELEKTRON</title>
-  <meta name="description" content="Ritual Return Set by ELEKTRON Wellness Studio." />
+  <meta
+    name="description"
+    content="Ritual Return Set by ELEKTRON Wellness Studio. A bundled ritual set designed to support consistency, return, and ongoing intentional practice."
+  />
   <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    .product-buy-wrap{
+      margin: 26px 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .product-buy-button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 0.96rem;
+      text-align: center;
+      background: linear-gradient(180deg, #e0ac56 0%, #ba7627 100%);
+      color: #ffffff;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+      transition: transform .2s ease;
+    }
+
+    .product-buy-button:hover{
+      transform: translateY(-1px);
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand-link">
-        <img src="../elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
+        <img src="../elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
       </a>
-
       <nav class="main-nav">
         <a href="../index.html">Home</a>
         <a href="../ritual-philosophy.html">Philosophy</a>
-        <a href="ritual-return-set.html" class="active">Ritual Return Set</a>
+        <a href="../index.html#products">Products</a>
       </nav>
     </div>
   </header>
 
   <main class="page-section">
     <div class="container">
-      <div class="page-card light">
-        <p class="section-kicker">Bundled Offering</p>
-        <h1 class="page-title dark-text">Ritual Return Set</h1>
+      <div class="page-card">
+
+        <p class="section-kicker">Ritual Set</p>
+        <h1 class="page-title">Ritual Return Set</h1>
+
         <p>
-          A bundled ritual collection designed to support consistency,
-          repetition, and the sacred act of beginning again.
-        </p>
-        <p>
-          The Ritual Return Set is for those who need a structured pathway back
-          into their practice.
+          The Ritual Return Set is a bundled offering designed to support consistency, reconnection, and ongoing intentional practice.
         </p>
 
-        <div class="hero-actions">
+        <p>
+          This set is created for those who want to maintain rhythm, return to their practice, and stay grounded in daily ritual work.
+        </p>
+
+        <h2>What It Supports</h2>
+        <p>
+          Consistency, grounding, return to self, ritual maintenance, and continued personal practice.
+        </p>
+
+        <div class="product-buy-wrap">
+          <h2>Purchase</h2>
+
           <a
-            class="btn btn-primary"
+            class="product-buy-button"
             href="https://buy.stripe.com/00w3cu81b3iE39faIs0ZW03"
             target="_blank"
             rel="noopener"
           >
-            Purchase Ritual Return Set
+            Buy Ritual Return Set
           </a>
         </div>
 
+        <h2>FAQ</h2>
+
+        <h3>What is the Ritual Return Set?</h3>
+        <p>
+          It is a bundled set designed to help you maintain and return to your ritual practice consistently.
+        </p>
+
+        <h3>Who is it for?</h3>
+        <p>
+          It is for those who have already begun their ritual work and want continued support in staying grounded and consistent.
+        </p>
+
+        <h3>How should I use it?</h3>
+        <p>
+          Use the items within the set as part of your daily or ongoing ritual practice to support consistency and return.
+        </p>
+
         <a class="back-link" href="../index.html">← Return home</a>
+
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
       <p><a href="../ritual-philosophy.html">Ritual Philosophy</a></p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
