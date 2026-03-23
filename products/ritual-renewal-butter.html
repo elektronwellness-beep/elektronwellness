@@ -4,48 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ritual Renewal Butter | ELEKTRON</title>
-  <meta name="description" content="Ritual Renewal Butter by ELEKTRON Wellness Studio." />
+  <meta
+    name="description"
+    content="Ritual Renewal Butter by ELEKTRON Wellness Studio. A rich amber-infused body ritual product designed for restoration, softness, grounding, and embodied support."
+  />
   <link rel="stylesheet" href="../style.css" />
+
   <style>
-    .size-selection-wrap {
-      margin: 2rem 0;
+    .size-selection-wrap{
+      margin: 28px 0 12px;
     }
 
-    .size-selection-intro {
-      margin-bottom: 1rem;
+    .size-selection-intro{
+      margin: 0 0 18px;
     }
 
-    .size-selection-grid {
+    .size-selection-grid{
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
+      gap: 16px;
+      margin-top: 16px;
     }
 
-    .size-option-card {
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 12px;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.4);
-      text-align: center;
+    .size-option-card{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.10);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
     }
 
-    .size-option-card h3 {
-      margin: 0 0 0.35rem 0;
+    .size-option-card h3{
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-size: 1.12rem;
     }
 
-    .size-option-card p {
-      margin: 0.35rem 0;
+    .size-option-card p{
+      margin: 0 0 8px;
+      color: var(--ink);
     }
 
-    .size-option-card .btn {
-      margin-top: 0.75rem;
+    .size-price{
+      font-weight: 700;
+      color: #a56d1b;
+      margin-bottom: 12px;
+    }
+
+    .size-note{
+      font-size: 0.95rem;
+      opacity: 0.88;
+    }
+
+    .size-option-card .btn{
       width: 100%;
-      justify-content: center;
+      margin-top: 8px;
     }
 
-    @media (max-width: 700px) {
-      .size-selection-grid {
+    @media (max-width: 700px){
+      .size-selection-grid{
         grid-template-columns: 1fr;
       }
     }
@@ -55,12 +72,12 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand-link">
-        <img src="../elektron-logo.png" alt="ELEKTRON logo" class="brand-logo" />
+        <img src="../elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
       </a>
       <nav class="main-nav">
         <a href="../index.html">Home</a>
         <a href="../ritual-philosophy.html">Philosophy</a>
-        <a href="ritual-renewal-butter.html" class="active">Ritual Renewal Butter</a>
+        <a href="../index.html#products">Products</a>
       </nav>
     </div>
   </header>
@@ -69,7 +86,6 @@
     <div class="container">
       <div class="page-card">
         <p class="section-kicker">Body Ritual</p>
-
         <h1 class="page-title">Ritual Renewal Butter</h1>
 
         <p>
@@ -87,7 +103,6 @@
 
         <div class="size-selection-wrap">
           <h2>Select Your Size</h2>
-
           <p class="size-selection-intro">
             Choose the Ritual Renewal Butter size you want before continuing to secure checkout.
           </p>
@@ -95,36 +110,56 @@
           <div class="size-selection-grid">
             <div class="size-option-card">
               <h3>10ml</h3>
-              <p>Trial size</p>
-              <p><strong>$8</strong></p>
-              <a class="btn btn-primary" href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08" target="_blank" rel="noopener">
+              <p class="size-note">Trial size</p>
+              <p class="size-price">$8</p>
+              <a
+                class="btn btn-primary"
+                href="https://buy.stripe.com/9B6fZgdlvf1m11703O0ZW08"
+                target="_blank"
+                rel="noopener"
+              >
                 Choose 10ml
               </a>
             </div>
 
             <div class="size-option-card">
               <h3>20ml</h3>
-              <p>Starter size</p>
-              <p><strong>$14</strong></p>
-              <a class="btn btn-primary" href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b" target="_blank" rel="noopener">
+              <p class="size-note">Starter size</p>
+              <p class="size-price">$14</p>
+              <a
+                class="btn btn-primary"
+                href="https://buy.stripe.com/fZu7sKchr06s39f9Eo0ZW0b"
+                target="_blank"
+                rel="noopener"
+              >
                 Choose 20ml
               </a>
             </div>
 
             <div class="size-option-card">
               <h3>30ml</h3>
-              <p>Core size</p>
-              <p><strong>$20</strong></p>
-              <a class="btn btn-primary" href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a" target="_blank" rel="noopener">
+              <p class="size-note">Core size</p>
+              <p class="size-price">$20</p>
+              <a
+                class="btn btn-primary"
+                href="https://buy.stripe.com/bJe28q0yJ6uQ5hn3g00ZW0a"
+                target="_blank"
+                rel="noopener"
+              >
                 Choose 30ml
               </a>
             </div>
 
             <div class="size-option-card">
               <h3>40ml</h3>
-              <p>Best value</p>
-              <p><strong>$26</strong></p>
-              <a class="btn btn-primary" href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09" target="_blank" rel="noopener">
+              <p class="size-note">Best value</p>
+              <p class="size-price">$26</p>
+              <a
+                class="btn btn-primary"
+                href="https://buy.stripe.com/28EbJ0a9jg5qcJP17S0ZW09"
+                target="_blank"
+                rel="noopener"
+              >
                 Choose 40ml
               </a>
             </div>
@@ -165,9 +200,13 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 ELEKTRON Wellness Studio</p>
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
       <p><a href="../ritual-philosophy.html">Ritual Philosophy</a></p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
