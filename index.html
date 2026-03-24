@@ -33,6 +33,72 @@
       display:block;
     }
 
+    .featured-flow{
+      padding-top:46px;
+      padding-bottom:46px;
+    }
+
+    .featured-flow-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .featured-flow-card{
+      background:#fff;
+      color:var(--ink);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
+
+    .featured-flow-card h3{
+      margin:0 0 8px;
+      color:var(--ink);
+      font-size:1.08rem;
+      line-height:1.2;
+    }
+
+    .featured-flow-card p{
+      margin:0 0 12px;
+      font-size:0.96rem;
+      line-height:1.5;
+    }
+
+    .featured-badge{
+      display:inline-block;
+      margin-bottom:8px;
+      font-size:0.74rem;
+      letter-spacing:1.1px;
+      text-transform:uppercase;
+      color:#a56d1b;
+      font-weight:600;
+    }
+
+    .featured-flow-card .btn{
+      margin-top:auto;
+      width:auto;
+      align-self:flex-start;
+      min-height:40px;
+      padding:10px 16px;
+      font-size:0.9rem;
+    }
+
+    .quick-path{
+      margin-top:10px;
+      color:var(--text-soft);
+      font-size:0.95rem;
+      text-align:center;
+    }
+
+    .quick-path strong{
+      color:var(--ink);
+    }
+
     @media (max-width: 900px){
       .hero-visual{
         order:2;
@@ -44,6 +110,15 @@
 
       .hero-image img{
         min-height:260px;
+      }
+
+      .featured-flow-grid{
+        grid-template-columns:1fr;
+      }
+
+      .featured-flow-card .btn{
+        width:100%;
+        align-self:stretch;
       }
     }
   </style>
@@ -101,8 +176,11 @@
           <p class="section-kicker">Start Here</p>
           <h2 class="section-heading dark-text">The clearest way into ELEKTRON.</h2>
           <p class="quick-path">
-            New here? Begin with the path that fits you best:
-            <strong>deep reset</strong>, <strong>short grounding</strong>, or <strong>ritual entry</strong>.
+            Choose your path:
+            <strong>30-Day Ritual Reset</strong>,
+            <strong>7-Day Grounding</strong>,
+            or
+            <strong>Ritual Invitation Box</strong>.
           </p>
         </div>
 
@@ -110,27 +188,21 @@
           <article class="featured-flow-card">
             <span class="featured-badge">Best Place to Begin</span>
             <h3>30-Day Ritual Reset</h3>
-            <p>
-              A structured 30-day guided ritual experience created to rebuild rhythm, discipline, and intentional daily practice.
-            </p>
+            <p>A 30-day guided ritual experience for rhythm, discipline, and daily practice.</p>
             <a class="btn btn-primary" href="products/30-day-ritual.html">Start the Reset</a>
           </article>
 
           <article class="featured-flow-card">
             <span class="featured-badge">Shorter Entry Point</span>
             <h3>7-Day Grounding</h3>
-            <p>
-              A shorter guided grounding experience created for stabilization, reconnection, and intentional return.
-            </p>
+            <p>A shorter guided grounding experience for stabilization, reconnection, and return.</p>
             <a class="btn btn-primary" href="products/7-day-grounding.html">Begin Grounding</a>
           </article>
 
           <article class="featured-flow-card">
             <span class="featured-badge">Physical Entry Point</span>
             <h3>Ritual Invitation Box</h3>
-            <p>
-              An entry point into the ELEKTRON world, created to introduce ritual, grounding, and intentional practice.
-            </p>
+            <p>An entry point into the ELEKTRON world through ritual, grounding, and intentional practice.</p>
             <a class="btn btn-primary" href="products/ritual-invitation-box.html">Explore the Box</a>
           </article>
         </div>
