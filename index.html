@@ -99,6 +99,23 @@
       color:var(--ink);
     }
 
+    .product-card-image{
+      width:100%;
+      aspect-ratio:1 / 1;
+      border-radius:14px;
+      overflow:hidden;
+      margin-bottom:14px;
+      background:rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.08);
+    }
+
+    .product-card-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
     @media (max-width: 900px){
       .hero-visual{
         order:2;
@@ -367,6 +384,9 @@
           </article>
 
           <article class="product-card">
+            <div class="product-card-image">
+              <img src="images/ritual-butter.png" alt="Ritual Renewal Butter" />
+            </div>
             <h3>Ritual Renewal Butter</h3>
             <p>A rich amber-infused body butter designed for restoration, softness, grounding, and embodied support.</p>
             <a class="text-link" href="products/ritual-renewal-butter.html">View product</a>
@@ -379,6 +399,9 @@
           </article>
 
           <article class="product-card">
+            <div class="product-card-image">
+              <img src="images/ritual-cleanse-spray.png" alt="Ritual Spray" />
+            </div>
             <h3>Ritual Spray</h3>
             <p>A grounding aromatic mist created to clear space, awaken the senses, and support intentional presence.</p>
             <a class="text-link" href="products/ritual-spray.html">View product</a>
