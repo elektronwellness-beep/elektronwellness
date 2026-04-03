@@ -11,58 +11,75 @@
   <link rel="stylesheet" href="../style.css" />
 
   <style>
+    .product-page-image{
+      width:100%;
+      max-width:520px;
+      margin:0 auto 24px;
+      border-radius:18px;
+      overflow:hidden;
+      background:rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.08);
+      box-shadow:0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    .product-page-image img{
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
+
     .butter-size-wrap{
-      margin: 26px 0 10px;
+      margin:26px 0 10px;
     }
 
     .butter-size-intro{
-      margin-bottom: 14px;
+      margin-bottom:14px;
     }
 
     .butter-size-list{
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 14px;
-      align-items: center;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:14px;
+      align-items:center;
     }
 
     .butter-size-button{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 320px;
-      min-height: 46px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-family: inherit;
-      font-size: 0.96rem;
-      text-align: center;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-      box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      max-width:320px;
+      min-height:46px;
+      padding:12px 20px;
+      border-radius:999px;
+      text-decoration:none;
+      font-family:inherit;
+      font-size:0.96rem;
+      text-align:center;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+      box-shadow:0 10px 22px rgba(0,0,0,0.14);
     }
 
     .butter-size-button:hover{
-      transform: translateY(-1px);
+      transform:translateY(-1px);
     }
 
     .butter-size-button.primary{
-      background: linear-gradient(180deg, #e0ac56 0%, #ba7627 100%);
-      color: #ffffff;
-      border: 1px solid transparent;
+      background:linear-gradient(180deg, #e0ac56 0%, #ba7627 100%);
+      color:#ffffff;
+      border:1px solid transparent;
     }
 
     .butter-size-button.secondary{
-      background: linear-gradient(180deg, #e8b968 0%, #c98933 100%);
-      color: #ffffff;
-      border: 1px solid transparent;
+      background:linear-gradient(180deg, #e8b968 0%, #c98933 100%);
+      color:#ffffff;
+      border:1px solid transparent;
     }
 
     @media (max-width: 640px){
       .butter-size-button{
-        max-width: 100%;
+        max-width:100%;
       }
     }
   </style>
@@ -88,6 +105,10 @@
 
         <p class="section-kicker">Body Ritual</p>
         <h1 class="page-title">Ritual Renewal Butter</h1>
+
+        <div class="product-page-image">
+          <img src="../images/ritual-butter.png" alt="Ritual Renewal Butter" />
+        </div>
 
         <p>
           A rich amber-infused body ritual product designed for restoration, softness, grounding, and embodied support.
