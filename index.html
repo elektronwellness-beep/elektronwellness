@@ -116,6 +116,55 @@
       display:block;
     }
 
+    .story-section{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .story-wrap{
+      max-width:920px;
+      margin:0 auto;
+    }
+
+    .story-panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(250,245,238,0.98) 100%);
+      color:var(--ink);
+      border-radius:var(--radius);
+      padding:32px;
+      box-shadow:0 14px 34px rgba(0,0,0,0.10);
+      border:1px solid rgba(165,109,27,0.14);
+    }
+
+    .story-panel p{
+      margin:0 0 16px;
+      line-height:1.8;
+      font-size:1rem;
+    }
+
+    .story-panel p:last-child{
+      margin-bottom:0;
+    }
+
+    .story-divider{
+      width:86px;
+      height:2px;
+      background:linear-gradient(90deg, rgba(165,109,27,0) 0%, rgba(165,109,27,0.9) 50%, rgba(165,109,27,0) 100%);
+      margin:18px 0 22px;
+    }
+
+    .story-closing{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid rgba(165,109,27,0.16);
+    }
+
+    .story-closing strong{
+      display:block;
+      margin-bottom:6px;
+      color:#8f5a10;
+      letter-spacing:0.4px;
+    }
+
     @media (max-width: 900px){
       .hero-visual{
         order:2;
@@ -137,6 +186,10 @@
         width:100%;
         align-self:stretch;
       }
+
+      .story-panel{
+        padding:24px 20px;
+      }
     }
   </style>
 </head>
@@ -148,6 +201,7 @@
       </a>
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
+        <a href="#my-story">My Story</a>
         <a href="#start-here">Start Here</a>
         <a href="ritual-philosophy.html">Philosophy</a>
         <a href="#products">Products</a>
@@ -167,7 +221,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-secondary" href="ritual-philosophy.html">Read the Philosophy</a>
-            <a class="btn btn-primary" href="#start-here">Start Here</a>
+            <a class="btn btn-primary" href="#my-story">Read My Story</a>
           </div>
         </div>
 
@@ -182,6 +236,52 @@
             <p>
               The word <strong>Elektron</strong> comes from the ancient Greek word for amber. Amber has long been associated with warmth, preservation, beauty, energy, and protection. That symbolism is the heart of the studio.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="my-story" class="section section-light story-section">
+      <div class="container">
+        <div class="section-head center">
+          <p class="section-kicker">My Story</p>
+          <h2 class="section-heading dark-text">How amber changed my life.</h2>
+        </div>
+
+        <div class="story-wrap">
+          <div class="story-panel">
+            <p>
+              Before ELEKTRON, my life felt chaotic and very ungrounded. I was moving through life without the steadiness I deeply needed, and I knew I was searching for something that could help me feel more connected, more present, and more like myself again.
+            </p>
+
+            <div class="story-divider"></div>
+
+            <p>
+              About five years ago, I first came across amber and began learning about its use. What started as curiosity became something much more personal. When I began working with amber, I started to feel lighter, better, and more grounded. I could feel the healing in a way that was both practical and deeply personal.
+            </p>
+
+            <p>
+              Amber became more than something beautiful to me. It became symbolic, spiritual, and part of a disciplined everyday practice. I slowly began to add amber into my lifestyle in ways that felt natural and meaningful, from holding an amber fossil in my hand to using creams, teas, and oils as part of my daily rituals.
+            </p>
+
+            <p>
+              The more I worked with it, the more I felt supported. Amber brought a sense of return. It helped me slow down, reconnect, and create more intention in the way I moved through life. It gave me something tangible, but it also gave me something deeper: a sense of grounding, warmth, and personal restoration.
+            </p>
+
+            <p>
+              Over time, that experience shaped the vision for ELEKTRON. I created this studio from lived experience and from a real relationship with amber. ELEKTRON is my way of sharing what helped me — through ritual products, guided practices, symbolic objects, and creative work designed to support grounding, reflection, and intentional living.
+            </p>
+
+            <p>
+              For me, amber is not only a material. It is a symbol, a spiritual companion, and a ritual tool. It represents warmth, preservation, light, energy, and return. It reminds me that healing can be steady, that grounding can be beautiful, and that meaningful change often begins with what we choose to return to every day.
+            </p>
+
+            <div class="story-closing">
+              <strong>ELEKTRON was born from that return.</strong>
+              <p>
+                Ancient natural alchemy of restoration and growth to peace within.
+              </p>
+            </div>
           </div>
         </div>
       </div>
