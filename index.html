@@ -395,8 +395,7 @@
         </p>
 
         <div class="hero-actions center-actions">
-          <!-- Replace # with your Google Form link -->
-          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Share Your Reflection</a>
+          <a class="btn btn-primary" href="https://forms.gle/7DXAvpyFibqrxQWL8" target="_blank" rel="noopener">Share Your Reflection</a>
         </div>
       </div>
     </section>
@@ -713,32 +712,41 @@
         console.error("Counter failed to load:", error);
       });
 
-    function parseCsvRow(row) {
-      const result = [];
-      let current = "";
-      let insideQuotes = false;
+    function parseCsv(text) {
+      const rows = [];
+      let row = [];
+      let value = "";
+      let inQuotes = false;
 
-      for (let i = 0; i < row.length; i++) {
-        const char = row[i];
-        const next = row[i + 1];
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const next = text[i + 1];
 
         if (char === '"') {
-          if (insideQuotes && next === '"') {
-            current += '"';
+          if (inQuotes && next === '"') {
+            value += '"';
             i++;
           } else {
-            insideQuotes = !insideQuotes;
+            inQuotes = !inQuotes;
           }
-        } else if (char === ',' && !insideQuotes) {
-          result.push(current);
-          current = "";
+        } else if (char === ',' && !inQuotes) {
+          row.push(value);
+          value = "";
+        } else if ((char === '\n' || char === '\r') && !inQuotes) {
+          if (char === '\r' && next === '\n') i++;
+          row.push(value);
+          if (row.some(cell => cell.trim() !== "")) rows.push(row);
+          row = [];
+          value = "";
         } else {
-          current += char;
+          value += char;
         }
       }
 
-      result.push(current);
-      return result;
+      row.push(value);
+      if (row.some(cell => cell.trim() !== "")) rows.push(row);
+
+      return rows;
     }
 
     function normalizeValue(value) {
@@ -765,10 +773,10 @@
     fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQhd1g9sqwF_GF_AwxmphNGf_BnHjdjlTFPEe0l6Q7VM_4IUh4bLR32fN_faAPGAEkgQxVmZ8NdckCA/pub?output=csv")
       .then(response => response.text())
       .then(csv => {
-        const rows = csv.replace(/\r/g, "").trim().split("\n").filter(Boolean);
+        const rows = parseCsv(csv);
         if (rows.length < 2) return;
 
-        const headers = parseCsvRow(rows[0]).map(header => header.trim().toLowerCase());
+        const headers = rows[0].map(header => header.trim().toLowerCase());
 
         const nameIndex = headers.indexOf("your name");
         const reflectionIndex = headers.indexOf("reflection");
@@ -776,14 +784,12 @@
         const approvedIndex = headers.indexOf("approved");
 
         if (nameIndex === -1 || reflectionIndex === -1 || permissionIndex === -1 || approvedIndex === -1) {
-          console.error("Review sheet headers do not match expected column names.");
-          console.log(headers);
+          console.error("Reflection sheet headers not found.", headers);
           return;
         }
 
         const approvedReviews = rows
           .slice(1)
-          .map(parseCsvRow)
           .filter(row => {
             const approved = normalizeValue(row[approvedIndex]);
             const permission = normalizeValue(row[permissionIndex]);
