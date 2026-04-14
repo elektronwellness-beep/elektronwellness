@@ -10,7 +10,7 @@
   <style>
     .reflections-grid{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
+      grid-template-columns:repeat(3, 1fr);
       gap:20px;
       margin-top:28px;
     }
@@ -59,107 +59,45 @@
   <div id="reflections-grid" class="reflections-grid">
     <div class="reflection-card">
       <div class="reflection-mark">“</div>
-      <p>Reflections will appear here once approved.</p>
+      <p>Reflections will appear here as they are approved.</p>
       <div class="reflection-name">ELEKTRON</div>
     </div>
   </div>
 
   <div style="margin-top:20px;">
-    <a href="https://forms.gle/7DXAvpyFibqrxQWL8" target="_blank">Share Your Reflection</a>
+    <a href="https://forms.gle/7DXAvpyFibqrxQWL8" target="_blank">
+      Share Your Reflection
+    </a>
   </div>
 </section>
 
 </main>
 
 <script>
-function parseCsv(text) {
-  const rows = [];
-  let row = [];
-  let value = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-    const next = text[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        value += '"';
-        i++;
-      } else {
-        inQuotes = !inQuotes;
-      }
-    } else if (char === ',' && !inQuotes) {
-      row.push(value);
-      value = "";
-    } else if ((char === '\n' || char === '\r') && !inQuotes) {
-      if (char === '\r' && next === '\n') i++;
-      row.push(value);
-      if (row.some(cell => cell.trim() !== "")) rows.push(row);
-      row = [];
-      value = "";
-    } else {
-      value += char;
-    }
-  }
-
-  row.push(value);
-  if (row.some(cell => cell.trim() !== "")) rows.push(row);
-
-  return rows;
-}
-
-function normalize(value){
-  return (value || "").toLowerCase().trim();
-}
-
-function escapeHtml(text){
-  return (text || "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;");
-}
-
-function formatName(name){
-  const n = (name || "").trim();
-  if(!n) return "Shared with permission";
-  const parts = n.split(" ");
-  if(parts.length === 1) return parts[0];
-  return parts[0] + " " + parts[1][0] + ".";
-}
-
 fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQhd1g9sqwF_GF_AwxmphNGf_BnHjdjlTFPEe0l6Q7VM_4IUh4bLR32fN_faAPGAEkgQxVmZ8NdckCA/pub?output=csv")
-.then(res => res.text())
-.then(csv => {
+.then(response => response.text())
+.then(data => {
 
-  const rows = parseCsv(csv);
-  if(rows.length < 2) return;
+  const rows = data.split("\n").slice(1);
 
-  const data = rows.slice(1);
-
-  const NAME = 0;
-  const REFLECTION = 3;
-  const PERMISSION = 4;
-  const APPROVED = 5;
-
-  const filtered = data
-    .filter(r => {
-      return normalize(r[APPROVED]) === "yes" &&
-             normalize(r[PERMISSION]).startsWith("yes") &&
-             (r[REFLECTION] || "").trim() !== "";
-    })
+  const reviews = rows
+    .map(row => row.split(","))
+    .filter(r => 
+      r[5] && r[5].trim().toLowerCase() === "yes" &&
+      r[4] && r[4].toLowerCase().includes("yes")
+    )
     .reverse()
-    .slice(0,6);
+    .slice(0, 6);
 
   const grid = document.getElementById("reflections-grid");
 
-  if(filtered.length === 0) return;
+  if(reviews.length === 0) return;
 
-  grid.innerHTML = filtered.map(r => `
+  grid.innerHTML = reviews.map(r => `
     <div class="reflection-card">
       <div class="reflection-mark">“</div>
-      <p>${escapeHtml(r[REFLECTION])}</p>
-      <div class="reflection-name">— ${escapeHtml(formatName(r[NAME]))}</div>
+      <p>${r[3]}</p>
+      <div class="reflection-name">— ${r[0]}</div>
     </div>
   `).join("");
 
