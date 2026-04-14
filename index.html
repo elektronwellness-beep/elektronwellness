@@ -379,31 +379,13 @@
         </div>
 
         <p class="reflections-intro">
-          These reflections will hold the words of those who have experienced ELEKTRON through ritual, product, and personal practice. Each reflection shared here is used with permission.
+          These reflections hold the words of those who have experienced ELEKTRON through ritual, product, and personal practice. Each reflection shared here is used with permission.
         </p>
 
-        <div class="reflections-grid">
+        <div class="reflections-grid" id="reflections-grid">
           <article class="reflection-card">
             <div class="reflection-mark">“</div>
-            <p>
-              Reflection coming soon.
-            </p>
-            <div class="reflection-name">Shared with permission</div>
-          </article>
-
-          <article class="reflection-card">
-            <div class="reflection-mark">“</div>
-            <p>
-              Reflection coming soon.
-            </p>
-            <div class="reflection-name">Shared with permission</div>
-          </article>
-
-          <article class="reflection-card">
-            <div class="reflection-mark">“</div>
-            <p>
-              Reflection coming soon.
-            </p>
+            <p>Reflections will appear here as they are approved.</p>
             <div class="reflection-name">Shared with permission</div>
           </article>
         </div>
@@ -413,7 +395,8 @@
         </p>
 
         <div class="hero-actions center-actions">
-          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd65OVJBZzzYUnW0FiHwz_ovlRiNGVAEL_RpJ14UWJn9Zf1Tg/viewform?usp=publish-editor" target="_blank" rel="noopener">Share Your Experience</a>
+          <!-- Replace # with your Google Form link -->
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Share Your Reflection</a>
         </div>
       </div>
     </section>
@@ -728,6 +711,116 @@
       })
       .catch(error => {
         console.error("Counter failed to load:", error);
+      });
+
+    function parseCsvRow(row) {
+      const result = [];
+      let current = "";
+      let insideQuotes = false;
+
+      for (let i = 0; i < row.length; i++) {
+        const char = row[i];
+        const next = row[i + 1];
+
+        if (char === '"') {
+          if (insideQuotes && next === '"') {
+            current += '"';
+            i++;
+          } else {
+            insideQuotes = !insideQuotes;
+          }
+        } else if (char === ',' && !insideQuotes) {
+          result.push(current);
+          current = "";
+        } else {
+          current += char;
+        }
+      }
+
+      result.push(current);
+      return result;
+    }
+
+    function normalizeValue(value) {
+      return (value || "").trim().toLowerCase();
+    }
+
+    function escapeHtml(text) {
+      return (text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function formatName(name) {
+      const trimmed = (name || "").trim();
+      if (!trimmed) return "Shared with permission";
+
+      const parts = trimmed.split(/\s+/).filter(Boolean);
+      if (parts.length === 1) return parts[0];
+
+      return `${parts[0]} ${parts[1].charAt(0)}.`;
+    }
+
+    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQhd1g9sqwF_GF_AwxmphNGf_BnHjdjlTFPEe0l6Q7VM_4IUh4bLR32fN_faAPGAEkgQxVmZ8NdckCA/pub?output=csv")
+      .then(response => response.text())
+      .then(csv => {
+        const rows = csv.replace(/\r/g, "").trim().split("\n").filter(Boolean);
+        if (rows.length < 2) return;
+
+        const headers = parseCsvRow(rows[0]).map(header => header.trim().toLowerCase());
+
+        const nameIndex = headers.indexOf("your name");
+        const reflectionIndex = headers.indexOf("reflection");
+        const permissionIndex = headers.indexOf("permission to use on website and social media");
+        const approvedIndex = headers.indexOf("approved");
+
+        if (nameIndex === -1 || reflectionIndex === -1 || permissionIndex === -1 || approvedIndex === -1) {
+          console.error("Review sheet headers do not match expected column names.");
+          console.log(headers);
+          return;
+        }
+
+        const approvedReviews = rows
+          .slice(1)
+          .map(parseCsvRow)
+          .filter(row => {
+            const approved = normalizeValue(row[approvedIndex]);
+            const permission = normalizeValue(row[permissionIndex]);
+            return approved === "yes" && permission.startsWith("yes");
+          })
+          .reverse()
+          .slice(0, 6);
+
+        const grid = document.getElementById("reflections-grid");
+        if (!grid) return;
+
+        if (approvedReviews.length === 0) {
+          grid.innerHTML = `
+            <article class="reflection-card">
+              <div class="reflection-mark">“</div>
+              <p>Reflections will appear here as they are approved.</p>
+              <div class="reflection-name">Shared with permission</div>
+            </article>
+          `;
+          return;
+        }
+
+        grid.innerHTML = approvedReviews.map(row => {
+          const name = formatName(row[nameIndex]);
+          const reflection = (row[reflectionIndex] || "").trim();
+
+          return `
+            <article class="reflection-card">
+              <div class="reflection-mark">“</div>
+              <p>${escapeHtml(reflection)}</p>
+              <div class="reflection-name">— ${escapeHtml(name)}</div>
+            </article>
+          `;
+        }).join("");
+      })
+      .catch(error => {
+        console.error("Reflections failed to load:", error);
       });
   </script>
 </body>
