@@ -666,6 +666,11 @@
           <div class="benefit-card"><h3>Early ritual invitations</h3></div>
         </div>
 
+        <div class="founding-counter">
+          <div class="counter-number"><span id="founders">0</span> / 100</div>
+          <p class="counter-label">Founding Members</p>
+        </div>
+
         <div class="hero-actions center-actions">
           <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfqZuaNpFuI1NHyg_QCZeqLNddLRqgtDG27k6p3lZV9zJVTUA/viewform?usp=header" target="_blank" rel="noopener">Subscribe / Become a Founding Member</a>
         </div>
@@ -770,7 +775,7 @@
         }
 
         if (reflectionCol === -1) {
-          reflectionCol = fallbackReflectionCols.find(i => dataRows.some(r => (r[i] || "").trim().length > 20)) ?? 4;
+          reflectionCol = fallbackReflectionCols.find(i => dataRows.some(r => (r[i] || "").trim().length > 3)) ?? 4;
         }
 
         if (permissionCol === -1) {
@@ -821,6 +826,20 @@
       })
       .catch(error => {
         console.error("Reflections failed to load:", error);
+      });
+
+    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?output=csv")
+      .then(response => response.text())
+      .then(csv => {
+        const rows = parseCsv(csv);
+        const count = Math.max(rows.length - 1, 0);
+        const founders = document.getElementById("founders");
+        if (founders) {
+          founders.textContent = count;
+        }
+      })
+      .catch(error => {
+        console.error("Counter failed to load:", error);
       });
   </script>
 </body>
