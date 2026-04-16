@@ -666,11 +666,6 @@
           <div class="benefit-card"><h3>Early ritual invitations</h3></div>
         </div>
 
-        <div class="founding-counter">
-          <div class="counter-number"><span id="founders">3</span> / 100</div>
-          <p class="counter-label">Founding Members</p>
-        </div>
-
         <div class="hero-actions center-actions">
           <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfqZuaNpFuI1NHyg_QCZeqLNddLRqgtDG27k6p3lZV9zJVTUA/viewform?usp=header" target="_blank" rel="noopener">Subscribe / Become a Founding Member</a>
         </div>
@@ -765,16 +760,33 @@
         let permissionCol = headers.findIndex(h => h.includes("permission"));
         let approvedCol = headers.findIndex(h => h === "approved");
 
-        if (nameCol === -1) nameCol = 1;
-        if (reflectionCol === -1) reflectionCol = 4;
-        if (permissionCol === -1) permissionCol = 5;
-        if (approvedCol === -1) approvedCol = 6;
+        const fallbackNameCols = [1, 0, 2];
+        const fallbackReflectionCols = [4, 3, 2];
+        const fallbackPermissionCols = [5, 4];
+        const fallbackApprovedCols = [6, 5];
+
+        if (nameCol === -1) {
+          nameCol = fallbackNameCols.find(i => dataRows.some(r => (r[i] || "").trim() !== "")) ?? 1;
+        }
+
+        if (reflectionCol === -1) {
+          reflectionCol = fallbackReflectionCols.find(i => dataRows.some(r => (r[i] || "").trim().length > 20)) ?? 4;
+        }
+
+        if (permissionCol === -1) {
+          permissionCol = fallbackPermissionCols.find(i => dataRows.some(r => normalizeValue(r[i]).startsWith("yes") || normalizeValue(r[i]).startsWith("no"))) ?? -1;
+        }
+
+        if (approvedCol === -1) {
+          approvedCol = fallbackApprovedCols.find(i => dataRows.some(r => normalizeValue(r[i]) === "yes" || normalizeValue(r[i]) === "no")) ?? -1;
+        }
 
         const approvedReviews = dataRows
           .filter(row => {
             const reflection = (row[reflectionCol] || "").trim();
-            const permission = normalizeValue(row[permissionCol]);
-            const approved = normalizeValue(row[approvedCol]);
+            const permission = permissionCol > -1 ? normalizeValue(row[permissionCol]) : "yes";
+            const approved = approvedCol > -1 ? normalizeValue(row[approvedCol]) : "yes";
+
             return reflection !== "" && permission.startsWith("yes") && approved === "yes";
           })
           .reverse()
