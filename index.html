@@ -667,7 +667,7 @@
         </div>
 
         <div class="founding-counter">
-          <div class="counter-number"><span id="founders">0</span> / 100</div>
+          <div class="counter-number"><span id="founders">3</span> / 100</div>
           <p class="counter-label">Founding Members</p>
         </div>
 
@@ -834,7 +834,7 @@
         const rows = parseCsv(csv);
         const count = Math.max(rows.length - 1, 0);
         const founders = document.getElementById("founders");
-        if (founders) {
+        if (founders && count > 0) {
           founders.textContent = count;
         }
       })
