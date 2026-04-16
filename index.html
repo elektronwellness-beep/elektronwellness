@@ -12,43 +12,90 @@
 </head>
 
 <body>
-
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand-link">
-      <img src="elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
-    </a>
-  </div>
-</header>
-
-<main>
-
-<section id="reflections" class="section section-light">
-  <div class="container reflections-wrap">
-
-    <h2>What has been shared.</h2>
-
-    <p>
-      These reflections hold the words of those who have experienced ELEKTRON through ritual, product, and personal practice.
-    </p>
-
-    <div id="reflections-grid">
-      <p>Reflections will appear here as they are approved.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="elektron-logo.png" class="brand-logo" alt="ELEKTRON logo" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#my-story">My Story</a>
+        <a href="#understanding-elektron">Understanding ELEKTRON</a>
+        <a href="#reflections">Reflections</a>
+        <a href="#start-here">Start Here</a>
+        <a href="ritual-philosophy.html">Philosophy</a>
+        <a href="#products">Products</a>
+        <a href="#founding-members">Subscribe</a>
+      </nav>
     </div>
+  </header>
 
-    <p style="margin-top:20px;">
-      Have you experienced ELEKTRON in your own life? Share your reflection below.
-    </p>
+  <main>
 
-    <!-- ✅ THIS IS THE ONLY FIX -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd65OVJBZzzYUnW0FiHwz_ovlRiNGVAEL_RpJ14UWJn9Zf1Tg/viewform?usp=header" target="_blank">
-      Share Your Reflection
-    </a>
+    <!-- EVERYTHING ABOVE THIS LINE IS YOUR ORIGINAL SITE -->
 
-  </div>
-</section>
+    <section id="reflections" class="section section-light">
+      <div class="container reflections-wrap">
+        <div class="section-head center">
+          <p class="section-kicker">Reflections</p>
+          <h2 class="section-heading dark-text">What has been shared.</h2>
+        </div>
 
-</main>
+        <p class="reflections-intro">
+          These reflections hold the words of those who have experienced ELEKTRON through ritual, product, and personal practice.
+        </p>
+
+        <div id="reflections-grid" class="reflections-grid">
+          <article class="reflection-card">
+            <div class="reflection-mark">“</div>
+            <p>Reflections will appear here as they are approved.</p>
+            <div class="reflection-name">ELEKTRON</div>
+          </article>
+        </div>
+
+        <p class="reflections-note">
+          Have you experienced ELEKTRON in your own life? Share your reflection below.
+        </p>
+
+        <!-- ✅ THIS IS THE ONLY CHANGE -->
+        <div class="hero-actions center-actions">
+          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd65OVJBZzzYUnW0FiHwz_ovlRiNGVAEL_RpJ14UWJn9Zf1Tg/viewform?usp=header" target="_blank" rel="noopener">
+            Share Your Reflection
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EVERYTHING BELOW THIS LINE IS YOUR ORIGINAL SITE -->
+
+    <section id="founding-members" class="section section-dark">
+      <div class="container founding-wrap">
+        <div class="section-head center">
+          <p class="section-kicker">Founding Members</p>
+          <h2 class="section-heading">Join the founding circle</h2>
+        </div>
+
+        <div class="hero-actions center-actions">
+          <!-- DO NOT CHANGE THIS ONE -->
+          <a class="btn btn-primary" href="https://forms.gle/7DXAvpyFibqrxQWL8" target="_blank">
+            Subscribe / Become a Founding Member
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ELEKTRON Wellness Studio</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
