@@ -777,10 +777,11 @@
 
         const dataRows = rows.slice(1);
 
-        const NAME_COL = 0;
-        const REFLECTION_COL = 3;
-        const PERMISSION_COL = 4;
-        const APPROVED_COL = 5;
+        /* Google Forms adds Timestamp first */
+        const NAME_COL = 1;
+        const REFLECTION_COL = 4;
+        const PERMISSION_COL = 5;
+        const APPROVED_COL = 6;
 
         const approvedReviews = dataRows
           .filter(row => {
