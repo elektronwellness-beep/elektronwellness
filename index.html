@@ -33,6 +33,27 @@
       display:block;
     }
 
+    .event-card{
+      background:#fff;
+      color:var(--ink);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+      border:1px solid rgba(217,162,74,0.18);
+    }
+
+    .event-card p{
+      margin-top:0;
+    }
+
+    .event-details{
+      margin:18px 0;
+      padding:18px;
+      border-left:3px solid #a56d1b;
+      background:rgba(217,162,74,0.08);
+      line-height:1.7;
+    }
+
     .featured-flow{
       padding-top:46px;
       padding-bottom:46px;
@@ -228,6 +249,7 @@
       </a>
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
+        <a href="#upcoming-event">Event</a>
         <a href="#my-story">My Story</a>
         <a href="#understanding-elektron">Understanding ELEKTRON</a>
         <a href="#reflections">Reflections</a>
@@ -250,7 +272,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-secondary" href="ritual-philosophy.html">Read the Philosophy</a>
-            <a class="btn btn-primary" href="#my-story">Read My Story</a>
+            <a class="btn btn-primary" href="#upcoming-event">Next Event</a>
           </div>
         </div>
 
@@ -265,6 +287,40 @@
             <p>
               The word <strong>Elektron</strong> comes from the ancient Greek word for amber. Amber has long been associated with warmth, preservation, beauty, energy, and protection. That symbolism is the heart of the studio.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upcoming-event" class="section section-light">
+      <div class="container two-col">
+        <div>
+          <p class="section-kicker">Upcoming Event</p>
+          <h2 class="section-heading dark-text">ELEKTRON returns to Blue Jay Market.</h2>
+        </div>
+
+        <div class="body-copy event-card">
+          <p>
+            ELEKTRON Wellness Studio will be vending again at the Blue Jay Market on
+            <strong>May 9</strong> at Bennetts Valley Community Center.
+          </p>
+
+          <p>
+            Come experience the products in person, explore the ritual offerings,
+            and connect with the materials behind ELEKTRON.
+          </p>
+
+          <div class="event-details">
+            <strong>Blue Jay Market</strong><br />
+            May 9<br />
+            Bennetts Valley Community Center<br />
+            19073 Bennetts Valley Highway<br />
+            Weedville, PA 15868
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">Explore Products</a>
+            <a class="btn btn-secondary" href="#founding-members">Join the Founding Circle</a>
           </div>
         </div>
       </div>
@@ -829,49 +885,49 @@
       });
 
     fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?output=csv")
-  .then(response => response.text())
-  .then(csv => {
-    const rows = parseCsv(csv);
+      .then(response => response.text())
+      .then(csv => {
+        const rows = parseCsv(csv);
 
-    if (rows.length < 2) return;
+        if (rows.length < 2) return;
 
-    const headers = rows[0].map(normalizeHeader);
-    const dataRows = rows.slice(1);
+        const headers = rows[0].map(normalizeHeader);
+        const dataRows = rows.slice(1);
 
-    let emailCol = headers.findIndex(h =>
-      h === "email" ||
-      h.includes("email address") ||
-      h.includes("email")
-    );
+        let emailCol = headers.findIndex(h =>
+          h === "email" ||
+          h.includes("email address") ||
+          h.includes("email")
+        );
 
-    if (emailCol === -1) {
-      emailCol = 1;
-    }
+        if (emailCol === -1) {
+          emailCol = 1;
+        }
 
-    const uniqueEmails = new Set();
+        const uniqueEmails = new Set();
 
-    dataRows.forEach(row => {
-      const email = (row[emailCol] || "").trim().toLowerCase();
+        dataRows.forEach(row => {
+          const email = (row[emailCol] || "").trim().toLowerCase();
 
-      if (
-        email &&
-        email.includes("@") &&
-        email.includes(".")
-      ) {
-        uniqueEmails.add(email);
-      }
-    });
+          if (
+            email &&
+            email.includes("@") &&
+            email.includes(".")
+          ) {
+            uniqueEmails.add(email);
+          }
+        });
 
-    const count = uniqueEmails.size;
-    const founders = document.getElementById("founders");
+        const count = uniqueEmails.size;
+        const founders = document.getElementById("founders");
 
-    if (founders) {
-      founders.textContent = count > 0 ? count : 6;
-    }
-  })
-  .catch(error => {
-    console.error("Counter failed to load:", error);
-  });
+        if (founders) {
+          founders.textContent = count > 0 ? count : 6;
+        }
+      })
+      .catch(error => {
+        console.error("Counter failed to load:", error);
+      });
   </script>
 </body>
 </html>
