@@ -667,7 +667,7 @@
         </div>
 
         <div class="founding-counter">
-          <div class="counter-number"><span id="founders">3</span> / 100</div>
+          <div class="counter-number"><span id="founders">6</span> / 100</div>
           <p class="counter-label">Founding Members</p>
         </div>
 
@@ -829,18 +829,49 @@
       });
 
     fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQTlS9rOG_M5e_bfMPfufZUAWkjU0EH_S0MPn8I6kzZdq0Vl2eJLFhycl2bv84VrXqqnf8YIzQhd4UE/pub?output=csv")
-      .then(response => response.text())
-      .then(csv => {
-        const rows = parseCsv(csv);
-        const count = Math.max(rows.length - 1, 0);
-        const founders = document.getElementById("founders");
-        if (founders && count > 0) {
-          founders.textContent = count;
-        }
-      })
-      .catch(error => {
-        console.error("Counter failed to load:", error);
-      });
+  .then(response => response.text())
+  .then(csv => {
+    const rows = parseCsv(csv);
+
+    if (rows.length < 2) return;
+
+    const headers = rows[0].map(normalizeHeader);
+    const dataRows = rows.slice(1);
+
+    let emailCol = headers.findIndex(h =>
+      h === "email" ||
+      h.includes("email address") ||
+      h.includes("email")
+    );
+
+    if (emailCol === -1) {
+      emailCol = 1;
+    }
+
+    const uniqueEmails = new Set();
+
+    dataRows.forEach(row => {
+      const email = (row[emailCol] || "").trim().toLowerCase();
+
+      if (
+        email &&
+        email.includes("@") &&
+        email.includes(".")
+      ) {
+        uniqueEmails.add(email);
+      }
+    });
+
+    const count = uniqueEmails.size;
+    const founders = document.getElementById("founders");
+
+    if (founders) {
+      founders.textContent = count > 0 ? count : 6;
+    }
+  })
+  .catch(error => {
+    console.error("Counter failed to load:", error);
+  });
   </script>
 </body>
 </html>
